@@ -48,7 +48,7 @@ export default function AboutSection() {
                         </div>
                     </div>
                     <div className="relative">
-                        <div className="rounded-xl overflow-hidden shadow-[0px_24px_64px_rgba(18,59,74,0.12)]">
+                        <div className="rounded-xl overflow-hidden shadow-[0 24px 64px rgba(28,43,61,0.12)]">
                             <Image
                                 src="https://images.unsplash.com/photo-1581094488379-6a10d04c0f04?w=800&h=700&fit=crop&auto=format"
                                 alt="Planos arquitectura"
@@ -58,9 +58,9 @@ export default function AboutSection() {
                                 priority
                             />
                         </div>
-                        <div className="bg-[#1D5093] text-white absolute -bottom-6 -left-6 rounded-xl p-5 shadow-lg hidden lg:block max-w-[220px]">
-                            <div className="text-xs text-white/50 mb-1 tracking-wider">ENFOQUE</div>
-                            <div className="font-semibold text-sm leading-snug font-body">Soluciones técnicas con impacto real en los procesos productivos.</div>
+                        <div className="bg-[#1D5093] text-white absolute -bottom-6 -left-6 rounded-xl p-5 shadow-lg hidden lg:block max-w-[220px] transition-transform duration-200 hover:-translate-y-1">
+                            <div className="text-[#96BDD8] text-xs mb-1 tracking-wider">ENFOQUE</div>
+                            <div className="font-semibold text-sm leading-snug">Soluciones técnicas con impacto real en los procesos productivos.</div>
                         </div>
                     </div>
                 </div>

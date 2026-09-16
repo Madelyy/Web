@@ -25,7 +25,6 @@ export default function Valores() {
                             className="group rounded-xl p-6 transition-all duration-300 hover:-translate-y-1 cursor-default"
                             style={{ border: `1px solid #DDE8F5`, background: `#fff`, boxShadow: `0 2px 12px rgba(28,43,61,0.04)` }}
                         >
-
                             <div
                                 className="text-xs font-bold tracking-widest mb-4"
                                 style={{ color: `#9BAFC6`, fontFamily: `var(--font-display)` }}

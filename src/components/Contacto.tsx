@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { IconClock, IconMail, IconPhone, IconPin } from "./Icons";
 
-export default function ContactSection() {
+export default function Contacto() {
     const [form, setForm] = useState({
         nombre: "",
         empresa: "",

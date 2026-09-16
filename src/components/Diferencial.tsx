@@ -1,13 +1,7 @@
-import { SpiralLines } from "./Icons"
+import { SpiralLines } from "./Icons";
+import { blocksData } from "../data/blocksData";
 
-export default function DifferentiatorSection() {
-    const blocks = [
-        { num: "01", title: "Enfoque personalizado",    desc: "Soluciones adaptadas a cada organización y sus necesidades específicas." },
-        { num: "02", title: "Conocimiento técnico",     desc: "Profesionales con experiencia especializada en el sector productivo." },
-        { num: "03", title: "Cumplimiento normativo",   desc: "Integración de requisitos técnicos y legales vigentes." },
-        { num: "04", title: "Mejora continua",          desc: "Optimización permanente de procesos y resultados organizacionales." },
-    ]
-
+export default function Diferencial() {
     return (
         <section className="bg-[#1E3347] relative py-24 lg:py-32 overflow-hidden">
             <div className="absolute inset-0 engineering-grid-light" />
@@ -29,7 +23,7 @@ export default function DifferentiatorSection() {
                     </p>
                 </div>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                    {blocks.map((b) => (
+                    {blocksData.map((b) => (
                         <div
                             key={b.num}
                             className="bg-white/10 rounded-xl p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-white/13"

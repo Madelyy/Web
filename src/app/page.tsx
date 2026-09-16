@@ -1,37 +1,37 @@
 import Image from "next/image";
 import HeaderSection from "@/components/Layout/Header";
-import HeroSection from "@/components/Hero";
-import AboutSection from "@/components/AboutSection";
-import CommitmentSection from "@/components/CommitmentSection";
-import ValueSection from "@/components/ValueSection";
-import ServiceSection from "@/components/ServicesSection";
-import TrainingSection from "@/components/TrainingSection";
-import ProductiveSection from "@/components/ProductiveSectorSection";
-import SectorsSection from "@/components/SectorsSection";
-import DifferentiatorSection from "@/components/DifferentiatorSection";
-import MethodologySection from "@/components/MethodologySection";
-import ProjectsSection from "@/components/ProjectsSection";
-import CTASection from "@/components/CTASection";
-import ContactSection from "@/components/ContactSection";
+import Hero from "@/components/Hero";
+import Nosotros from "@/components/Nosotros";
+import MisionVision from "@/components/MisionVision";
+import Valores from "@/components/Valores";
+import Servicios from "@/components/Servicios";
+import Capacitacion from "@/components/Capacitacion";
+import SectorProductivo from "@/components/SectorProductivo";
+import Sectores from "@/components/Sectores";
+import Diferencial from "@/components/Diferencial";
+import Metodologia from "@/components/Metodologia";
+import Proyectos from "@/components/Proyectos";
+import CTA from "@/components/CTA";
+import Contacto from "@/components/Contacto";
 import FooterSection from "@/components/Layout/Footer";
 
 export default function Home() {
   return (
     <div className="min-h-screen cursor-default">
       <HeaderSection />
-      <HeroSection />
-      <AboutSection />
-      <CommitmentSection />
-      <ValueSection />
-      <ServiceSection />
-      <TrainingSection />
-      <ProductiveSection />
-      <SectorsSection />
-      <DifferentiatorSection />
-      <MethodologySection />
-      <ProjectsSection />
-      <CTASection />
-      <ContactSection />
+      <Hero />
+      <Nosotros />
+      <MisionVision />
+      <Valores />
+      <Servicios />
+      <Capacitacion />
+      <SectorProductivo />
+      <Sectores />
+      <Diferencial />
+      <Metodologia />
+      <Proyectos />
+      <CTA />
+      <Contacto />
       <FooterSection />
     </div>
   );

@@ -1,22 +1,7 @@
-export default function SectorsSection() {
-    const SECTOR_IMAGES: Record<string, string> = {
-        "Pesca y acuicultura": "https://images.unsplash.com/photo-1588159481334-3502acdcbfb9?w=600&h=500&fit=crop&auto=format",
-        "Alimentos": "https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?w=600&h=500&fit=crop&auto=format",
-        "Industria y sector productivo": "https://images.unsplash.com/photo-1581092335397-9583eb92d232?w=600&h=500&fit=crop&auto=format",
-        "Vivienda y construcción": "https://images.unsplash.com/photo-1527335988388-b40ee248d80c?w=600&h=500&fit=crop&auto=format",
-        "Proyectos de inversión": "https://images.unsplash.com/photo-1581094488379-6a10d04c0f04?w=600&h=500&fit=crop&auto=format",
-        "Gestión ambiental": "https://images.unsplash.com/photo-1563391017873-6e6beab67fed?w=600&h=500&fit=crop&auto=format",
-    }
+import { SECTOR_IMAGES } from "../data/sectoresImagenes";
+import { sectorsData } from "../data/sectoresData";
 
-    const sectors = [
-        { title: "Pesca y acuicultura",             desc: "Procesamiento, productos hidrobiológicos y procesos productivos." },
-        { title: "Alimentos",                       desc: "Calidad, inocuidad y sistemas de gestión alimentaria." },
-        { title: "Industria y sector productivo",   desc: "Procesos, producción y mejora organizacional." },
-        { title: "Vivienda y construcción",         desc: "Arquitectura, ingeniería y expedientes técnicos." },
-        { title: "Proyectos de inversión",          desc: "Desarrollo de documentación técnica para proyectos." },
-        { title: "Gestión ambiental",               desc: "Calidad, desempeño ambiental y sostenibilidad." },
-    ]
-
+export default function Sectores() {
     return (
         <section id="sectores" className="bg-[#EEF3FA] py-24 lg:py-32 engineering-grid cursor:default">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -33,7 +18,7 @@ export default function SectorsSection() {
                     </h2>
                 </div>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                    {sectors.map((s) => (
+                    {sectorsData.map((s) => (
                         <div
                             key={s.title}
                             className="group relative rounded-xl overflow-hidden cursor:pointer"

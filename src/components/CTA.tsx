@@ -1,6 +1,6 @@
 import { IconChevronRight } from "./Icons";
 
-export default function CTASection() {
+export default function CTA() {
     return (
         <section className="relative py-24 lg:py-32 overflow-hidden">
             <div

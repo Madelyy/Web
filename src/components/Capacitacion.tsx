@@ -1,15 +1,7 @@
 import { IconChevronRight } from "./Icons"
+import { tagsData } from "../data/tagsData"
 
-export default function TrainingSection() {
-    const tags = [
-        "Expedientes técnicos",
-        "Gestión de calidad",
-        "Inocuidad",
-        "Gestión ambiental",
-        "Legislación",
-        "Procesos productivos",
-    ]
-
+export default function Capacitacion() {
     return (
         <section
             className="relative py-0 overflow-hidden cursor-default"
@@ -45,7 +37,7 @@ export default function TrainingSection() {
                         técnico, experiencia profesional y aplicación práctica.
                     </p>
                     <div className="flex flex-wrap gap-2 mb-10">
-                        {tags.map((tag) => (
+                        {tagsData.map((tag) => (
                             <span
                                 key={tag}
                                 className="text-xs px-3 py-1.5 rounded-full transition-all duration-300 hover:brightness-150"

@@ -1,25 +1,7 @@
 import Image from "next/image";
+import { cardsSectorData } from "../data/cardsSectorData";
 
-export default function ProductiveSection() {
-    const cards = [
-        {
-            title: "Procesos productivos",
-            desc: "Evaluación y mejora de procesos de producción.",
-        },
-        {
-            title: "Calidad e inocuidad",
-            desc: "Fortalecimiento de sistemas de calidad e inocuidad.",
-        },
-        {
-            title: "Cumplimiento normativo",
-            desc: "Requisitos técnicos y legales del sector.",
-        },
-        {
-            title: "Gestión ambiental",
-            desc: "Mejora del desempeño ambiental y aseguramiento de procesos.",
-        },
-    ]
-
+export default function SectorProductivo() {
     return (
         <section className="bg-white py-24 lg:py-32 cursor-default">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -41,7 +23,7 @@ export default function ProductiveSection() {
                             sector pesquero, acuícola e industrial.
                         </p>
                         <div className="grid sm:grid-cols-2 gap-4">
-                            {cards.map((c) => (
+                            {cardsSectorData.map((c) => (
                                 <div
                                     key={c.title}
                                     className="rounded-xl p-5 transition-all duration-200 hover:-translate-y-0.5"

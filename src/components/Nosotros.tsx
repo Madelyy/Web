@@ -1,7 +1,7 @@
 import Image from "next/image";
-import TimelineItem from "./Comps/TimelineItem"
+import { etapasData } from "../data/etapasData"
 
-export default function AboutSection() {
+export default function Nosotros() {
     return (
         <section id="nosotros" className="py-24 lg:py-32 bg-[#fff]">
             <div className="max-w-7xl mx-auto px-6 lg:px-10 ">
@@ -19,32 +19,21 @@ export default function AboutSection() {
                             así como consultorías técnicas en gestión de la calidad para empresas del sector pesquero, industrial y productivo.
                         </p>
                         <div className="space-y-0">
-                            <TimelineItem
-                                number={"01"}
-                                title={"Diagnóstico"}
-                                description={"Evaluación inicial del estado de la organización"}
-                            />
-                            <TimelineItem
-                                number={"02"}
-                                title={"Análisis"}
-                                description={"Identificación de brechas y oportunidades de mejora"}
-                            />
-                            <TimelineItem
-                                number={"03"}
-                                title={"Solución"}
-                                description={"Diseño de estrategia técnica personalizada"}
-                            />
-                            <TimelineItem
-                                number={"04"}
-                                title={"Implementación"}
-                                description={"Ejecución guiada con acompañamiento experto"}
-                            />
-                            <TimelineItem
-                                number={"05"}
-                                title={"Mejora"}
-                                description={"Monitoreo y optimización continua de resultados"}
-                                isLast
-                            />
+                            {etapasData.map((s) => (
+                                <div
+                                    key={s.num}
+                                    className="flex gap-5 group"
+                                >
+                                    <div className="flex flex-col items-center">
+                                        <div className="bg-[#EEF3FA] text-[#2E52A8] border-[1.5px] border-[#CAD8EC  ] w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 transition-colors duration-200">{s.num}</div>
+                                        {!s.isLast && <div className="bg-[#DDE8F5] min-h-6 w-px flex-1 my-1" />}
+                                    </div>
+                                    <div className={s.isLast ? "" : "pb-5"}>
+                                        <div className="text-[#1C2B3D] font-heading font-semibold text-sm mb-0.5">{s.title}</div>
+                                        <div className="text-[#6E85A0] text-sm">{s.desc}</div>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                     <div className="relative">

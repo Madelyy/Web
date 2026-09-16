@@ -1,39 +1,7 @@
 import { IconStar, IconClock, IconHeart, IconLightbulb, IconShield } from "./Icons";
+import { valoresData } from "../data/valoresData";
 
-export default function ValueSection() {
-    const valores = [
-        {
-            num: "01",
-            icon: <IconStar />,
-            label: "Excelencia",
-            desc: "Experiencia de profesionales especializados en el sector productivo.",
-        },
-        {
-            num: "02",
-            icon: <IconClock />,
-            label: "Puntualidad",
-            desc: "Entrega de servicios en los tiempos planificados.",
-        },
-        {
-            num: "03",
-            icon: <IconHeart />,
-            label: "Respeto",
-            desc: "Compromiso con clientes, socios estratégicos y colaboradores.",
-        },
-        {
-            num: "04",
-            icon: <IconLightbulb />,
-            label: "Innovación",
-            desc: "Impulso constante de nuevos estándares y soluciones.",
-        },
-        {
-            num: "05",
-            icon: <IconShield />,
-            label: "Calidad",
-            desc: "Servicios eficientes y eficaces orientados a resultados.",
-        },
-    ]
-
+export default function Valores() {
     return (
         <section id="nosotros-valores" className="bg-white py-24 lg:py-32">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -56,7 +24,7 @@ export default function ValueSection() {
                     </div>
                 </div>
                 <div className="grid sm-grid-cols-2 lg:grid-cols-5 gap-5">
-                    {valores.map((v) => (
+                    {valoresData.map((v) => (
                         <div
                             key={v.num}
                             className="group rounded-xl p-6 transition-all duration-300 hover:-translate-y-1 cursor-default"

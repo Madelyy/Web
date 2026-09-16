@@ -1,14 +1,6 @@
-import { IconAnalysis, IconDesign, IconImplement, IconImprove, IconSearch } from "./Icons"
+import { etapasData } from "../data/etapasData";
 
-export default function MethodologySection() {
-    const steps = [
-        { num: "01", label: "Diagnóstico",      icon: <IconSearch />,       desc: "Evaluación integral del estado actual de la organización." },
-        { num: "02", label: "Análisis",         icon: <IconAnalysis />,     desc: "Identificación de brechas, riesgos y oportunidades de mejora." },
-        { num: "03", label: "Diseño",           icon: <IconDesign />,       desc: "Formulación de la estrategia técnica y plan de acción." },
-        { num: "04", label: "Implementación",   icon: <IconImplement />,    desc: "Ejecución guiada y acompañamiento experto en cada etapa." },
-        { num: "05", label: "Mejora",           icon: <IconImprove />,      desc: "Monitoreo, evaluación y optimización continua de resultados." },
-    ]
-
+export default function Metodologia() {
     return (
         <section id="experiencia-metodologia" className="bg-white py-24 lg:py-32">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -32,7 +24,7 @@ export default function MethodologySection() {
                         }}
                     />
                     <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-8">
-                        {steps.map((s, i) => (
+                        {etapasData.map((s, i) => (
                             <div
                                 key={s.num}
                                 className="flex flex-col items-center text-center group"
@@ -64,7 +56,7 @@ export default function MethodologySection() {
                                         fontFamily: "var(--font-display)"
                                     }}
                                 >
-                                    {s.label}
+                                    {s.title}
                                 </div>
                                 <p className="text-[#6E85A0] text-xs leading-relaxed">
                                     {s.desc}

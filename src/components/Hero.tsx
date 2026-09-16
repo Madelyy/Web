@@ -1,8 +1,7 @@
-import Button from "./Comps/Button";
 import useInView from "@/hooks/useInView";
 import { IconChevronRight } from "./Icons";
 
-export default function HeroSection() {
+export default function Hero() {
     return (
         <section id="inicio" className="bg-[#111827] relative min-h-screen flex flex-col justify-end">
             <div

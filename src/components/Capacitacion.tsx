@@ -9,11 +9,7 @@ export default function Capacitacion() {
         >
             <div
                 className="absolute inset-0"
-                style={{
-                    backgroundImage: `url(https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?w=1400&h=600&fit=crop&auto=format)`,
-                    backgroundSize: `cover`,
-                    backgroundPosition: `center`,
-                }}
+                style={{ backgroundImage: `url(https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?w=1400&h=600&fit=crop&auto=format)`, backgroundSize: `cover`, backgroundPosition: `center` }}
             />
             <div
                 className="absolute inset-0"
@@ -24,10 +20,7 @@ export default function Capacitacion() {
                 <div className="max-w-2xl">
                     <h2
                         className="text-3xl lg:text-4xl font-bold text-white mb-5 leading-tight"
-                        style={{
-                            fontFamily: `var(--font-display)`,
-                            letterSpacing: `-0.02em`,
-                        }}
+                        style={{ fontFamily: `var(--font-display)`, letterSpacing: `-0.02em` }}
                     >
                         Capacitación técnica diseñada para tu organización.
                     </h2>
@@ -41,11 +34,7 @@ export default function Capacitacion() {
                             <span
                                 key={tag}
                                 className="text-xs px-3 py-1.5 rounded-full transition-all duration-300 hover:brightness-150"
-                                style={{
-                                    background: `rgba(74,122,181,0.12)`,
-                                    border: `1px solid rgba(74,122,181,0.28)`,
-                                    color: `#96BDD8`,
-                                }}
+                                style={{ background: `rgba(74,122,181,0.12)`, border: `1px solid rgba(74,122,181,0.28)`, color: `#96BDD8` }}
                             >
                                 {tag}
                             </span>
@@ -54,11 +43,7 @@ export default function Capacitacion() {
                     <a
                         href="#contacto"
                         className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-sm transition-all duration-200 hover:opacity-90 hover:gap-10"
-                        style={{
-                            background: `#4A7AB5`,
-                            color: `#fff`,
-                            fontFamily: `var(--font-display)`
-                        }}
+                        style={{ background: `#4A7AB5`, color: `#fff`, fontFamily: `var(--font-display)` }}
                     >
                         Solicitar capacitación <IconChevronRight />
                     </a>

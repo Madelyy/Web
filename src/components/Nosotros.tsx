@@ -38,14 +38,7 @@ export default function Nosotros() {
                     </div>
                     <div className="relative">
                         <div className="rounded-xl overflow-hidden shadow-[0 24px 64px rgba(28,43,61,0.12)]">
-                            <Image
-                                src="https://images.unsplash.com/photo-1581094488379-6a10d04c0f04?w=800&h=700&fit=crop&auto=format"
-                                alt="Planos arquitectura"
-                                width={480}
-                                height={480}
-                                className="w-full object-cover"
-                                priority
-                            />
+                            <Image src="https://images.unsplash.com/photo-1581094488379-6a10d04c0f04?w=800&h=700&fit=crop&auto=format" alt="Planos arquitectura" width={480} height={480} className="w-full object-cover" priority />
                         </div>
                         <div className="bg-[#1D5093] text-white absolute -bottom-6 -left-6 rounded-xl p-5 shadow-lg hidden lg:block max-w-[220px] transition-transform duration-200 hover:-translate-y-1">
                             <div className="text-[#96BDD8] text-xs mb-1 tracking-wider">ENFOQUE</div>

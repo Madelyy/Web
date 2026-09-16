@@ -10,10 +10,7 @@ export default function Diferencial() {
                 <div className="mb-16 max-w-2xl">
                     <h2
                         className="text-3xl lg:text-4xl font-bold text-white mb-5 leading-tight"
-                        style={{
-                            fontFamily: `var(--font-display)`,
-                            letterSpacing: `-0.02em`,
-                        }}
+                        style={{ fontFamily: `var(--font-display)`, letterSpacing: `-0.02em` }}
                     >
                         Más que consultoría: acompañamiento técnico.
                     </h2>
@@ -31,10 +28,7 @@ export default function Diferencial() {
                         >
                             <div
                                 className="text-xs font-bold tracking-widest mb-5"
-                                style={{
-                                    color: `#96BDD8`,
-                                    fontFamily: `var(--font-display)`
-                                }}
+                                style={{ color: `#96BDD8`, fontFamily: `var(--font-display)` }}
                             >
                                 {b.num}
                             </div>

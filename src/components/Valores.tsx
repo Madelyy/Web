@@ -1,4 +1,3 @@
-import { IconStar, IconClock, IconHeart, IconLightbulb, IconShield } from "./Icons";
 import { valoresData } from "../data/valoresData";
 
 export default function Valores() {
@@ -9,11 +8,7 @@ export default function Valores() {
                     <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
                         <h2
                             className="text-3xl lg:text-4xl font-bold max-w-md"
-                            style={{
-                                fontFamily: `var(--font-display)`,
-                                color: `#1C2B3D`,
-                                letterSpacing: `-0.02em`,
-                            }}
+                            style={{ fontFamily: `var(--font-display)`, color: `#1C2B3D`, letterSpacing: `-0.02em` }}
                         >
                             Los principios que guían nuestro trabajo.
                         </h2>
@@ -28,19 +23,12 @@ export default function Valores() {
                         <div
                             key={v.num}
                             className="group rounded-xl p-6 transition-all duration-300 hover:-translate-y-1 cursor-default"
-                            style={{
-                                border: `1px solid #DDE8F5`,
-                                background: `#fff`,
-                                boxShadow: `0 2px 12px rgba(28,43,61,0.04)`
-                            }}
+                            style={{ border: `1px solid #DDE8F5`, background: `#fff`, boxShadow: `0 2px 12px rgba(28,43,61,0.04)` }}
                         >
 
                             <div
                                 className="text-xs font-bold tracking-widest mb-4"
-                                style={{
-                                    color: `#9BAFC6`,
-                                    fontFamily: `var(--font-display)`
-                                }}
+                                style={{ color: `#9BAFC6`, fontFamily: `var(--font-display)` }}
                             >
                                 {v.num}
                             </div>
@@ -49,10 +37,7 @@ export default function Valores() {
                             </div>
                             <div
                                 className="font-bold text-sm mb-2"
-                                style={{
-                                    color: `#1C2B3D`,
-                                    fontFamily: `var(--font-display)`
-                                }}
+                                style={{ color: `#1C2B3D`, fontFamily: `var(--font-display)` }}
                             >
                                 {v.label}
                             </div>

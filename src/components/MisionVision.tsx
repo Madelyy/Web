@@ -1,4 +1,4 @@
-import { cardsMVData } from "../data/cardsMVData"; 
+import { cardsMVData } from "../data/cardsMVData";
 export default function MisionVision() {
     return (
         <section
@@ -9,11 +9,7 @@ export default function MisionVision() {
                 <div className="text-center mb-16">
                     <h2
                         className="text-3xl lg:text-4xl font-bold"
-                        style={{
-                            fontFamily: "var(--font-display)",
-                            color: "#1C2B3D",
-                            letterSpacing: "-0.02em",
-                        }}
+                        style={{ fontFamily: `var(--font-display)`, color: `#1C2B3D`, letterSpacing: `-0.02em` }}
                     >
                         Lo que nos define.
                     </h2>
@@ -24,11 +20,7 @@ export default function MisionVision() {
                         <div
                             key={card.tag}
                             className="rounded-xl p-8 flex flex-col transition-all duration-300 hover:-translate-y-1"
-                            style={{
-                                background: "#fff",
-                                border: "1px solid #e8eef1",
-                                boxShadow: "0 4px 24px rgba(18,59,74,0.06)",
-                            }}
+                            style={{ background: `#fff`, border: `1px solid #e8eef1`, boxShadow: `0 4px 24px rgba(18,59,74,0.06)` }}
                         >
                             <div
                                 className="text-xs font-semibold tracking-widest uppercase mb-5 px-3 py-1.5 rounded-full self-start"

@@ -8,11 +8,7 @@ export default function Servicios() {
                 <div className="mb-16">
                     <h2
                         className="text-3xl lg:text-4xl font-bold mb-4"
-                        style={{
-                            fontFamily: `var(--font-display)`,
-                            color: `#1C2B3D`,
-                            letterSpacing: `-0.02em`
-                        }}
+                        style={{ fontFamily: `var(--font-display)`, color: `#1C2B3D`, letterSpacing: `-0.02em` }}
                     >
                         Soluciones técnicas para organizaciones que buscan mejorar.
                     </h2>
@@ -22,19 +18,12 @@ export default function Servicios() {
                         <div
                             key={s.num}
                             className="group rounded-xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg cursor-pointer"
-                            style={{
-                                background: "#DDE8F5",
-                                border: "1px solid #DDE8F5",
-                                boxShadow: "0 2px 12px rgba(28,43,61,0.04)"
-                            }}
+                            style={{ background: "#DDE8F5", border: "1px solid #DDE8F5", boxShadow: "0 2px 12px rgba(28,43,61,0.04)" }}
                         >
                             <div className="flex items-start justify-between mb-5">
                                 <div
                                     className="text-xs font-bold trackind-widest"
-                                    style={{
-                                        color: `#9BAFC6`,
-                                        fontFamily: "var(--font-display)"
-                                    }}
+                                    style={{ color: `#9BAFC6`, fontFamily: `var(--font-display)` }}
                                 >
                                     {s.num}
                                 </div>
@@ -42,10 +31,7 @@ export default function Servicios() {
                             </div>
                             <h3
                                 className="font-bold text-sm mb-2 leading-snug"
-                                style={{
-                                    color: `#1C2B3D`,
-                                    fontFamily: `var(--font-display)`
-                                }}
+                                style={{ color: `#1C2B3D`, fontFamily: `var(--font-display)` }}
                             >
                                 {s.title}
                             </h3>

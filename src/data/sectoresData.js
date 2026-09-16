@@ -1,4 +1,4 @@
-export const sectorsData = [
+export const sectoresData = [
     { title: "Pesca y acuicultura", desc: "Procesamiento, productos hidrobiológicos y procesos productivos." },
     { title: "Alimentos", desc: "Calidad, inocuidad y sistemas de gestión alimentaria." },
     { title: "Industria y sector productivo", desc: "Procesos, producción y mejora organizacional." },

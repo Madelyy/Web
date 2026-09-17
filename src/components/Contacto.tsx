@@ -1,6 +1,6 @@
 "use client"
-import { useState } from "react";
-import { IconClock, IconMail, IconPhone, IconPin } from "./Icons";
+import { use, useState } from "react";
+import { empresaData } from "../data/empresaData";
 import { serviciosData } from "../data/serviciosData";
 import { sectoresData } from "../data/sectoresData";
 
@@ -14,6 +14,9 @@ export default function Contacto() {
         servicio: "",
         mensaje: "",
     })
+
+    const [sending, setSending] = useState(false);
+    const [result, setResult] = useState("");
 
     const handleChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -38,9 +41,49 @@ export default function Contacto() {
         }))
     }
 
+    const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        setSending(true);
+        setResult("");
+
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-type": "application/json"
+                },
+                body: JSON.stringify(form)
+            })
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.error || "Ocurrió un error")
+            }
+
+            setResult("Enviada correctamente")
+
+            setForm({
+                nombre: "",
+                empresa: "",
+                correo: "",
+                telefono: "",
+                sector: "",
+                servicio: "",
+                mensaje: "",
+            });
+        } catch (error) {
+            console.error(error)
+            setResult("No se pudo enviar")
+        } finally {
+            setSending(false);
+        }
+    }
+
     const inputClass = "w-full px-4 py-3 rounded-lg text-sm border-[1.5px] border-[#DDE8F5] outline-none transition-all duration-200 focus:outline-none focus:ring-0 focus:border-blue-500"
 
-    const inputStyle = { background: `EEF3FA`, color: `#1C2B3D"`, fontFamily: `var(--font-body)` }
+    const inputStyle = { background: `#EEF3FA`, color: `#1C2B3D`, fontFamily: `var(--font-body)` }
 
     return (
         <section id="contacto" className="bg-white py-24 lg:py-32">
@@ -58,12 +101,7 @@ export default function Contacto() {
                             evaluará cómo podemos ayudarte.
                         </p>
                         <div className="space-y-5">
-                            {[
-                                { icon: <IconPin />, label: "Ubicación", value: "Pasaje Maracaibo N° 170, Jesús María" },
-                                { icon: <IconMail />, label: "Correo", value: "asistente@albatrosperu.com" },
-                                { icon: <IconPhone />, label: "Teléfono", value: "+51 990 184 822" },
-                                { icon: <IconClock />, label: "Horario", value: "Lun - Vie..." }
-                            ].map((item) => (
+                            {empresaData.map((item) => (
                                 <div
                                     key={item.label}
                                     className="flex items-start gap-4"
@@ -81,56 +119,59 @@ export default function Contacto() {
                         className="rounded-2xl p-8 lg:p-10"
                         style={{ background: `#EEF3FA`, border: `1px solid #DDE8F5`, boxShadow: `0 8px 32px rgba(28,43,61,0.06)` }}
                     >
-                        <div className="grid sm:grid-cols-2 gap-4 mb-4">
-                            <div>
-                                <label className="text-[#6E85A0] block text-xs font-semibold mb-2 uppercase tracking-wider">Nombre</label>
-                                <input name="nombre" value={form.nombre} onChange={handleChange} placeholder="Nombre completo" className={inputClass} style={inputStyle} />
+                        <form onSubmit={handleSubmit}>
+                            <div className="grid sm:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label className="text-[#6E85A0] block text-xs font-semibold mb-2 uppercase tracking-wider">Nombre</label>
+                                    <input name="nombre" value={form.nombre} onChange={handleChange} placeholder="Nombre completo" className={inputClass} style={inputStyle} />
+                                </div>
+                                <div>
+                                    <label className="text-[#6E85A0] block text-xs font-semibold mb-2 uppercase tracking-wider">Empresa</label>
+                                    <input name="empresa" value={form.empresa} onChange={handleChange} placeholder="Empresa" className={inputClass} style={inputStyle} />
+                                </div>
                             </div>
-                            <div>
-                                <label className="text-[#6E85A0] block text-xs font-semibold mb-2 uppercase tracking-wider">Empresa</label>
-                                <input name="empresa" value={form.empresa} onChange={handleChange} placeholder="Empresa" className={inputClass} style={inputStyle} />
+                            <div className="grid sm:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label className="text-[#6E85A0] block text-xs font-semibold mb-2 uppercase tracking-wider">Correo corporativo</label>
+                                    <input name="correo" value={form.correo} onChange={handleChange} placeholder="correo@empresa.com" className={inputClass} style={inputStyle} />
+                                </div>
+                                <div>
+                                    <label className="text-[#6E85A0] block text-xs font-semibold mb-2 uppercase tracking-wider">Teléfono</label>
+                                    <input type="tel" name="telefono" value={form.telefono} onChange={handleChange} placeholder="+51" maxLength={15} className={inputClass} style={inputStyle} />
+                                </div>
                             </div>
-                        </div>
-                        <div className="grid sm:grid-cols-2 gap-4 mb-4">
-                            <div>
-                                <label className="text-[#6E85A0] block text-xs font-semibold mb-2 uppercase tracking-wider">Correo corporativo</label>
-                                <input name="correo" value={form.correo} onChange={handleChange} placeholder="correo@empresa.com" className={inputClass} style={inputStyle} />
+                            <div className="grid sm:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label className="text-[#6E85A0] block text-xs font-semibold mb-2 uppercase tracking-wider">Sector</label>
+                                    <select name="sector" value={form.sector} onChange={handleChange} className={inputClass} style={inputStyle} >
+                                        <option value="">Seleccionar sector</option>
+                                        {sectoresData.map((s) => (
+                                            <option key={s.title}>{s.title}</option>
+                                        ))}
+                                    </select>
+                                </div>
+                                <div>
+                                    <label className="text-[#6E85A0] block text-xs font-semibold mb-2 uppercase tracking-wider">Servicio de interés</label>
+                                    <select name="servicio" value={form.servicio} onChange={handleChange} className={inputClass} style={inputStyle}>
+                                        <option value="">Seleccionar servicio</option>
+                                        {serviciosData.map((s) => (
+                                            <option key={s.title}>{s.title}</option>
+                                        ))}
+                                    </select>
+                                </div>
                             </div>
-                            <div>
-                                <label className="text-[#6E85A0] block text-xs font-semibold mb-2 uppercase tracking-wider">Teléfono</label>
-                                <input type="tel" name="telefono" value={form.telefono} onChange={handleChange} placeholder="+51" maxLength={15} className={inputClass} style={inputStyle} />
+                            <div className="mb-6">
+                                <label className="text-[#6E85A0] block text-xs font-semibold mb-2 uppercase tracking-wider">Mensaje</label>
+                                <textarea name="mensaje" value={form.mensaje} onChange={handleChange} placeholder="Describe el desafío o proyecto en el que necesitas apoyo..." rows={4} className={inputClass} style={{ ...inputStyle, resize: `none` }} />
                             </div>
-                        </div>
-                        <div className="grid sm:grid-cols-2 gap-4 mb-4">
-                            <div>
-                                <label className="text-[#6E85A0] block text-xs font-semibold mb-2 uppercase tracking-wider">Sector</label>
-                                <select name="sector" value={form.sector} onChange={handleChange} className={inputClass} style={inputStyle} >
-                                    <option value="">Seleccionar sector</option>
-                                    {sectoresData.map((s) => (
-                                        <option key={s.title}>{s.title}</option>
-                                    ))}
-                                </select>
-                            </div>
-                            <div>
-                                <label className="text-[#6E85A0] block text-xs font-semibold mb-2 uppercase tracking-wider">Servicio de interés</label>
-                                <select name="servicio" value={form.servicio} onChange={handleChange} className={inputClass} style={inputStyle}>
-                                    <option value="">Seleccionar servicio</option>
-                                    {serviciosData.map((s) => (
-                                        <option key={s.title}>{s.title}</option>
-                                    ))}
-                                </select>
-                            </div>
-                        </div>
-                        <div className="mb-6">
-                            <label className="text-[#6E85A0] block text-xs font-semibold mb-2 uppercase tracking-wider">Mensaje</label>
-                            <textarea name="mensaje" value={form.mensaje} onChange={handleChange} placeholder="Describe el desafío o proyecto en el que necesitas apoyo..." rows={4} className={inputClass} style={{ ...inputStyle, resize: `none` }} />
-                        </div>
-                        <button
-                            className="w-full py-3.5 rounded-lg font-semibold text-sm transition-all duration-200 hover:opacity-90"
-                            style={{ background: `#2E52A8`, color: `#fff`, fontFamily: `var(--font-display)` }}
-                        >
-                            Enviar consulta
-                        </button>
+                            <button
+                                type="submit"
+                                className="w-full py-3.5 rounded-lg font-semibold text-sm transition-all duration-200 hover:opacity-90 cursor-pointer   "
+                                style={{ background: `#2E52A8`, color: `#fff`, fontFamily: `var(--font-display)` }}
+                            >
+                                Enviar consulta
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>

@@ -2,7 +2,7 @@ import { proyectosData } from "../data/proyectosData";
 
 export default function Proyectos() {
     return (
-        <section id="experiencia" className="bg-[#EEF3FA] py-24 lg:py-32 engineering grid">
+        <section id="experiencia" className="reveal bg-[#EEF3FA] py-24 lg:py-32 engineering grid">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
                 <div className="mb-16">
                     <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">

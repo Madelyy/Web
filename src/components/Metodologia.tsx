@@ -2,7 +2,7 @@ import { etapasData } from "../data/etapasData";
 
 export default function Metodologia() {
     return (
-        <section id="experiencia-metodologia" className="bg-white py-24 lg:py-32">
+        <section id="experiencia-metodologia" className="reveal bg-white py-24 lg:py-32">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
                 <div className="mb-16">
                     <h2

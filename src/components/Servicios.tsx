@@ -1,9 +1,24 @@
+"use client"
+import { useState } from "react";
 import { serviciosData } from "../data/serviciosData";
-import { IconArrow } from "./Icons";
+import { IconArrow, IconChevronRight, IconClipboard, IconTarget, IconX } from "./Icons";
+import ServicioModal from "./ServicioModal";
 
 export default function Servicios() {
+    const [selectedService, setSelectedService] = useState<(typeof serviciosData)[number] | null>(null);
+    const [IsClosing, setIsClosing] = useState(false);
+
+    const closeModal = () => {
+        setIsClosing(true);
+
+        setTimeout(() => {
+            setSelectedService(null);
+            setIsClosing(false);
+        }, 175);
+    };
+
     return (
-        <section id="servicios" className="bg-[#EEF3FA] py-24 lg:py-32 engineering-grid">
+        <section id="servicios" className="reveal bg-[#EEF3FA] py-24 lg:py-32 engineering-grid">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
                 <div className="mb-16">
                     <h2
@@ -36,11 +51,24 @@ export default function Servicios() {
                                 {s.title}
                             </h3>
                             <p className="text-[#6E85A0] text-xs leading-relaxed mb-5">{s.desc}</p>
-                            <div className="text-[#4A7AB5] flex items-center gap-1 text-xs font-medium transition-all duration-200 group-hover:gap-5">Ver más <IconArrow /></div>
+                            <button
+                                type="button"
+                                onClick={() => setSelectedService(s)}
+                                className="text-[#4A7AB5] flex items-center gap-1 text-xs font-medium transition-all duration-200 group-hover:gap-5 cursor-pointer"
+                            >
+                                Conocer servicio <IconArrow />
+                            </button>
                         </div>
                     ))}
                 </div>
             </div>
+            {selectedService && (
+                <ServicioModal
+                    service={selectedService}
+                    isClosing={IsClosing}
+                    onClose={closeModal}
+                />
+            )}
         </section>
     )
 }

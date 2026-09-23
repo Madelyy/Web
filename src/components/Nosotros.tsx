@@ -3,7 +3,7 @@ import { etapasData } from "../data/etapasData"
 
 export default function Nosotros() {
     return (
-        <section id="nosotros" className="py-24 lg:py-32 bg-[#fff]">
+        <section id="nosotros" className="reveal py-24 lg:py-32 bg-[#fff]">
             <div className="max-w-7xl mx-auto px-6 lg:px-10 ">
                 <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
                     <div className="max-w-[500px]">

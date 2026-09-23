@@ -24,4 +24,5 @@ export { default as IconPhone } from "./IconPhone";
 export { default as IconPin } from "./IconPin";
 export { default as IconLinkedin } from "./IconLinkedin";
 export { default as IconFacebook } from "./IconFacebook";
+export { default as IconTarget } from "./IconTarget";
 export { default as SpiralLines } from "./SpiralLines";

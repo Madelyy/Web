@@ -4,18 +4,16 @@ import { tagsData } from "../data/tagsData"
 export default function Capacitacion() {
     return (
         <section
-            className="relative py-0 overflow-hidden cursor-default"
+            className="reveal relative py-0 overflow-hidden"
             style={{ minHeight: "500px" }}
         >
             <div
                 className="absolute inset-0"
                 style={{ backgroundImage: `url(https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?w=1400&h=600&fit=crop&auto=format)`, backgroundSize: `cover`, backgroundPosition: `center` }}
             />
-            <div
-                className="absolute inset-0"
-                style={{ background: `rgba(20,30,50,0.87)` }}
-            />
+            <div className="absolute inset-0" style={{ background: "rgba(20,30,50,0.87)" }} />
             <div className="absolute inset-0 engineering-grid-light" />
+
             <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 py-24 lg:py-32">
                 <div className="max-w-2xl">
                     <h2

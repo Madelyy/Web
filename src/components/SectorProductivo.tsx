@@ -3,7 +3,7 @@ import { cardsSectorData } from "../data/cardsSectorData";
 
 export default function SectorProductivo() {
     return (
-        <section className="bg-white py-24 lg:py-32 cursor-default">
+        <section className="reveal bg-white py-24 lg:py-32 cursor-default">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
                 <div className="grid lg:grid-cols-2 gap-10 items-start">
                     <div>

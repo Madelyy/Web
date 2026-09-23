@@ -3,7 +3,7 @@ import { IconChevronRight } from "./Icons";
 
 export default function Hero() {
     return (
-        <section id="inicio" className="bg-[#111827] relative min-h-screen flex flex-col justify-end">
+        <section id="inicio" className="bg-[#111827] relative min-h-500px flex flex-col justify-end">
             <div
                 className="absolute inset-0"
                 style={{ backgroundImage: `url(https://images.unsplash.com/photo-1727517786596-fe89c521318b?w=1600&h=900&fit=crop&auto=format&quot)`, backgroundSize: `cover`, backgroundPosition: `center` }}

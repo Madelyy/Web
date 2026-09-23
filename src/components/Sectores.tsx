@@ -3,7 +3,7 @@ import { sectoresData } from "../data/sectoresData";
 
 export default function Sectores() {
     return (
-        <section id="sectores" className="bg-[#EEF3FA] py-24 lg:py-32 engineering-grid cursor:default">
+        <section id="sectores" className="reveal bg-[#EEF3FA] py-24 lg:py-32 engineering-grid cursor:default">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
                 <div className="mb-16">
                     <h2

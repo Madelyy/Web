@@ -2,7 +2,7 @@ import { cardsMVData } from "../data/cardsMVData";
 export default function MisionVision() {
     return (
         <section
-            className="py-24 lg:py-32 engineering-grid"
+            className="reveal py-24 lg:py-32 engineering-grid"
             style={{ background: "#EEF3FA" }}
         >
             <div className="max-w-7xl mx-auto px-6 lg:px-10">

@@ -30,18 +30,22 @@ export default function HeaderSection() {
             style={{
                 background: scrolled ? `rgba(255,255,255,0.98)` : `rgba(255,255,255,0.94)`,
                 backdropFilter: `blur(14px)`,
-                borderBottom: scrolled ? `1px solid #DDE8F5` : `none`,
-                boxShadow: scrolled ? `0 2px 24px rgba(28,43,61,0.07)` : `none`
+                borderBottom: scrolled ? `2px solid #DDE8F5` : `none`,
+                boxShadow: scrolled ? `0 4px 24px rgba(16, 28, 43, 0.07)` : `none`,
             }}
         >
-            <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-16 lg:h-20">
+            <div
+                className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between transition-all duration-300 h-16 lg:h-20"
+                style={{ height: scrolled ? `60px` : `80px` }}
+            >
                 <Image
                     src={"/images/logoA.png"}
                     alt="Albatros Asociados SAC"
+                    height={250}
                     width={250}
-                    height={200}
-                    className="shrink-0"
+                    className="shrink-0 transition-all duration-300 object-contain"
                     priority
+                    style={{ width: scrolled ? `180px` : `250px`, height: scrolled ? `180` : `250px` }}
                 />
                 <nav className="hidden lg:flex items-center gap-7">
                     {navLinks.map((link) => (
@@ -73,11 +77,11 @@ export default function HeaderSection() {
                     {open ? <IconX /> : <IconMenu />}
                 </button>
             </div>
-            {open && (
-                <div
-                    className="lg:hidden bg-white"
-                    style={{ borderTop: `1px solid #DDE8F5` }}
-                >
+            <div
+                className="lg:hidden right-0"
+                style={{ borderTop: `2px solid #DDE8F5` }}
+            >
+                {open && (
                     <div className="px-6 py-4 flex flex-col gap-4">
                         {navLinks.map((link) => (
                             <a
@@ -90,15 +94,15 @@ export default function HeaderSection() {
                         ))}
                         <a
                             href="#contacto"
-                            className="text-sm font-semibold px-5 py-2.5 rounded-lg text-center mt-2"
+                            className="text-sm font-semibold px-5 py-2.5 rounded-lg text-center"
                             style={{ background: `#4A7AB5`, color: `#fff` }}
                             onClick={() => setOpen(false)}
                         >
                             Solicitar asesoría
                         </a>
                     </div>
-                </div>
-            )}
+                )}
+            </div>
         </header>
     )
 }

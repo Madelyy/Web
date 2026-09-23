@@ -86,7 +86,7 @@ export default function Contacto() {
     const inputStyle = { background: `#EEF3FA`, color: `#1C2B3D`, fontFamily: `var(--font-body)` }
 
     return (
-        <section id="contacto" className="bg-white py-24 lg:py-32">
+        <section id="contacto" className="reveal bg-white py-24 lg:py-32">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
                 <div className="grid lg:grid-cols-2 gap-16 items-start">
                     <div>
@@ -123,21 +123,21 @@ export default function Contacto() {
                             <div className="grid sm:grid-cols-2 gap-4 mb-4">
                                 <div>
                                     <label className="text-[#6E85A0] block text-xs font-semibold mb-2 uppercase tracking-wider">Nombre</label>
-                                    <input name="nombre" value={form.nombre} onChange={handleChange} placeholder="Nombre completo" className={inputClass} style={inputStyle} />
+                                    <input name="nombre" value={form.nombre} onChange={handleChange} placeholder="Nombre completo" className={inputClass} style={inputStyle} required />
                                 </div>
                                 <div>
                                     <label className="text-[#6E85A0] block text-xs font-semibold mb-2 uppercase tracking-wider">Empresa</label>
-                                    <input name="empresa" value={form.empresa} onChange={handleChange} placeholder="Empresa" className={inputClass} style={inputStyle} />
+                                    <input name="empresa" value={form.empresa} onChange={handleChange} placeholder="Empresa" className={inputClass} style={inputStyle} required />
                                 </div>
                             </div>
                             <div className="grid sm:grid-cols-2 gap-4 mb-4">
                                 <div>
                                     <label className="text-[#6E85A0] block text-xs font-semibold mb-2 uppercase tracking-wider">Correo corporativo</label>
-                                    <input name="correo" value={form.correo} onChange={handleChange} placeholder="correo@empresa.com" className={inputClass} style={inputStyle} />
+                                    <input name="correo" value={form.correo} onChange={handleChange} placeholder="correo@empresa.com" className={inputClass} style={inputStyle} required />
                                 </div>
                                 <div>
                                     <label className="text-[#6E85A0] block text-xs font-semibold mb-2 uppercase tracking-wider">Teléfono</label>
-                                    <input type="tel" name="telefono" value={form.telefono} onChange={handleChange} placeholder="+51" maxLength={15} className={inputClass} style={inputStyle} />
+                                    <input type="tel" name="telefono" value={form.telefono} onChange={handleChange} placeholder="+51" maxLength={15} className={inputClass} style={inputStyle} required />
                                 </div>
                             </div>
                             <div className="grid sm:grid-cols-2 gap-4 mb-4">
@@ -162,7 +162,7 @@ export default function Contacto() {
                             </div>
                             <div className="mb-6">
                                 <label className="text-[#6E85A0] block text-xs font-semibold mb-2 uppercase tracking-wider">Mensaje</label>
-                                <textarea name="mensaje" value={form.mensaje} onChange={handleChange} placeholder="Describe el desafío o proyecto en el que necesitas apoyo..." rows={4} className={inputClass} style={{ ...inputStyle, resize: `none` }} />
+                                <textarea name="mensaje" value={form.mensaje} onChange={handleChange} placeholder="Describe el desafío o proyecto en el que necesitas apoyo..." rows={4} className={inputClass} style={{ ...inputStyle, resize: `none` }} required />
                             </div>
                             <button
                                 type="submit"

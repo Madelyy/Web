@@ -2,7 +2,7 @@ import { IconChevronRight } from "./Icons";
 
 export default function CTA() {
     return (
-        <section className="relative py-24 lg:py-32 overflow-hidden">
+        <section className="reveal relative py-24 lg:py-32 overflow-hidden">
             <div
                 className="absolute inset-0"
                 style={{ backgroundImage: `url(https://images.unsplash.com/photo-1527335988388-b40ee248d80c?w=1400&h=700&fit=crop&auto=format)`, backgroundSize: `cover`, backgroundPosition: `center` }}

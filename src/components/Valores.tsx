@@ -2,7 +2,7 @@ import { valoresData } from "../data/valoresData";
 
 export default function Valores() {
     return (
-        <section id="nosotros-valores" className="bg-white py-24 lg:py-32">
+        <section id="nosotros-valores" className="reveal bg-white py-24 lg:py-32">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
                 <div className="mb-16">
                     <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">

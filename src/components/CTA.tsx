@@ -5,7 +5,7 @@ export default function CTA() {
         <section className="reveal relative py-24 lg:py-32 overflow-hidden">
             <div
                 className="absolute inset-0"
-                style={{ backgroundImage: `url(https://images.unsplash.com/photo-1527335988388-b40ee248d80c?w=1400&h=700&fit=crop&auto=format)`, backgroundSize: `cover`, backgroundPosition: `center` }}
+                style={{ backgroundImage: `url(/images/embarcacionMariangella.jpeg)`, backgroundSize: `cover`, backgroundPosition: `center` }}
             />
             <div className="bg-[rgba(20,30,50,0.90)]/90 absolute inset-0" />
             <div className="absolute inset-0 engineering-grid-light" />

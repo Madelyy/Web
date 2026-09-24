@@ -71,6 +71,10 @@ h6 {
   background-size: 48px 48px;
 }
 
+input[name="telefono"]::placeholder {
+  color: #00070b
+}
+
 .reveal {
   animation: reveal linear both;
   animation-timeline: view();

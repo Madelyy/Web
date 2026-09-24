@@ -5,30 +5,30 @@ export const valoresData = [
         num: "01",
         icon: <IconStar />,
         label: "Excelencia",
-        desc: "Experiencia de profesionales especializados en el sector productivo."
+        desc: "Experiencia de profesionales especializados en el sector pesquero y productivo."
     },
     {
         num: "02",
         icon: <IconClock />,
         label: "Puntualidad",
-        desc: "Entrega de servicios en los tiempos planificados."
+        desc: "Cumplimiento de servicios y compromisos en los tiempos planificados."
     },
     {
         num: "03",
         icon: <IconHeart />,
         label: "Respeto",
-        desc: "Compromiso con clientes, socios estratégicos y colaboradores."
+        desc: "Compromiso con nuestros clientes, socios estratégicos y colaboradores."
     },
     {
         num: "04",
         icon: <IconLightbulb />,
         label: "Innovación",
-        desc: "Impulso constante de nuevos estándares y soluciones."
+        desc: "Desarrollo de soluciones técnicas para optimizar operaciones pesqueras."
     },
     {
         num: "05",
         icon: <IconShield />,
         label: "Calidad",
-        desc: "Servicios eficientes y eficaces orientados a resultados."
+        desc: "Servicios eficientes orientados a la seguridad y mejora de procesos."
     },
 ]

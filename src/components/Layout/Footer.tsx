@@ -1,5 +1,7 @@
-import Image from "next/image"
-import { IconFacebook, IconGlobe, IconLinkedin } from "../Icons"
+import Image from "next/image";
+import { IconFacebook, IconGlobe, IconLinkedin } from "../Icons";
+import { sectoresData } from "@/data/sectoresData";
+import { serviciosData } from "@/data/serviciosData";
 
 export default function FooterSection() {
     const navLinks = [
@@ -9,25 +11,6 @@ export default function FooterSection() {
         "Sectores",
         "Experiencia",
         "Contacto",
-    ]
-
-    const servicios = [
-        "Ingeniería",
-        "Calidad",
-        "Inocuidad",
-        "Gestión ambiental",
-        "Capacitación",
-        "Consultoría",
-        "Expedientes técnicos",
-        "Legislación",
-    ]
-    const sectores = [
-        "Pesca y acuicultura",
-        "Alimentos",
-        "Industria",
-        "Vivienda y construcción",
-        "Proyectos de inversión",
-        "Gestión ambiental",
     ]
 
     return (
@@ -56,10 +39,7 @@ export default function FooterSection() {
                                         key={i}
                                         href="#"
                                         className="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 hover:opacity-80"
-                                        style={{
-                                            background: `rgba(255,255,255,0.07)`,
-                                            color: `rgba(255,255,255,0.5)`,
-                                        }}
+                                        style={{ background: `rgba(255,255,255,0.07)`, color: `rgba(255,255,255,0.5)` }}
                                     >
                                         {icon}
                                     </a>
@@ -74,8 +54,7 @@ export default function FooterSection() {
                                 <li key={l}>
                                     <a
                                         href={`#${l.toLowerCase()}`}
-                                        className="text-xs transition-colors duration-200 hover:text-white"
-                                        style={{ color: `rgba(255,255,255,0.45)` }}
+                                        className="text-white/45 text-xs transition-colors duration-200 hover:text-white/80"
                                     >
                                         {l}
                                     </a>
@@ -86,14 +65,13 @@ export default function FooterSection() {
                     <div>
                         <div className="text-[#96BDD8] text-xs font-semibold tracking-widest uppercase mb-5">Servicios</div>
                         <ul className="space-y-2.5">
-                            {servicios.map((s) => (
-                                <li key={s}>
+                            {serviciosData.map((s) => (
+                                <li key={s.title}>
                                     <a
                                         href="#servicios"
-                                        className="text-xs transition-colors duration-200 hover:text-white"
-                                        style={{ color: `rgba(255,255,255,0.38)` }}
+                                        className="text-white/45 text-xs transition-colors duration-200 hover:text-white/80"
                                     >
-                                        {s}
+                                        {s.title}
                                     </a>
                                 </li>
                             ))}
@@ -102,14 +80,13 @@ export default function FooterSection() {
                     <div>
                         <div className="text-[#96BDD8] text-xs font-semibold tracking-widest uppercase mb-5">Sectores</div>
                         <ul className="space-y-2.5">
-                            {sectores.map((s) => (
-                                <li key={s}>
+                            {sectoresData.map((s) => (
+                                <li key={s.title}>
                                     <a
                                         href="#sectores"
-                                        className="text-xs transition-colors duration-200 hover:text-white"
-                                        style={{ color: `rgba(255,255,255,0.38)` }}
+                                        className="text-white/45 text-xs transition-colors duration-200 hover:text-white/80"
                                     >
-                                        {s}
+                                        {s.title}
                                     </a>
                                 </li>
                             ))}
@@ -118,17 +95,14 @@ export default function FooterSection() {
                 </div>
                 <div
                     className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 text-xs"
-                    style={{
-                        borderTop: `1px solid rgba(255,255,255,0.08)`,
-                        color: `rgba(255,255,255,0.3)`
-                    }}
+                    style={{ borderTop: `1px solid rgba(255,255,255,0.08)`, color: `rgba(255,255,255,0.3)` }}
                 >
                     <span>
                         © {new Date().getFullYear()} ALBATROS ASOCIADOS SAC
                     </span>
                     <div className="flex gap-6">
-                        <a href="#" className="hover:text-white/60 transition-colors">Política de privacidad</a>
-                        <a href="#" className="hover:text-white/60 transition-colors">Términos de uso</a>
+                        { /** <a href="#" className="hover:text-white/60 transition-colors">Política de privacidad</a>
+                        <a href="#" className="hover:text-white/60 transition-colors">Términos de uso</a> */}
                     </div>
                 </div>
             </div>

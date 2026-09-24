@@ -14,6 +14,7 @@ import Proyectos from "@/components/Proyectos";
 import CTA from "@/components/CTA";
 import Contacto from "@/components/Contacto";
 import FooterSection from "@/components/Layout/Footer";
+import Equipo from "@/components/Equipo";
 
 export default function Home() {
   return (
@@ -22,13 +23,14 @@ export default function Home() {
       <Hero />
       <Nosotros />
       <MisionVision />
+      <Equipo   />
       <Valores />
       <Servicios />
       <Capacitacion />
       <SectorProductivo />
-      <Sectores />
+      { /** <Sectores /> **/}
       <Diferencial />
-      <Metodologia />
+      { /** <Metodologia /> **/}
       <Proyectos />
       <CTA />
       <Contacto />

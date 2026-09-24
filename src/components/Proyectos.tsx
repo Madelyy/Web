@@ -15,11 +15,10 @@ export default function Proyectos() {
                             Experiencia que genera confianza.
                         </h2>
                         <p
-                            className="text-xs max-w-xs px-3 py-2 rounded-lg"
+                            className="text-s max-w-xs px-3 py-2 rounded-lg"
                             style={{ color: `#6E85A0`, background: `rgba(74,122,181,0.07)`, border: `1px solid #DDE8F5` }}
                         >
-                            Contenido de casos a actualizar con proyectos reales de la
-                            empresa.
+                            Conocemos los desafíos de diferentes sectores.
                         </p>
                     </div>
                 </div>

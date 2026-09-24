@@ -14,9 +14,9 @@ export default function Nosotros() {
                             Experiencia técnica orientada a resultados.
                         </h2>
                         <p className="text-[#60757D] text-base leading-relaxed mb-10">
-                            Somos una empresa peruana creada para ofrecer servicios de capacitación, consultorías y asesoramiento
-                            técnico en arquitectura y diseño de ingeniería para el sector vivienda y construcción,
-                            así como consultorías técnicas en gestión de la calidad para empresas del sector pesquero, industrial y productivo.
+                            Somos una empresa peruana especializada en servicios de capacitación, consultoría y 
+                            asesoramiento técnico para el sector pesquero y productivo, con experiencia en gestión, 
+                            calidad, seguridad y mejora de procesos aplicados a embarcaciones y operaciones pesqueras.
                         </p>
                         <div className="space-y-0">
                             {etapasData.map((s) => (
@@ -38,11 +38,11 @@ export default function Nosotros() {
                     </div>
                     <div className="relative">
                         <div className="rounded-xl overflow-hidden shadow-[0 24px 64px rgba(28,43,61,0.12)]">
-                            <Image src="https://images.unsplash.com/photo-1581094488379-6a10d04c0f04?w=800&h=700&fit=crop&auto=format" alt="Planos arquitectura" width={480} height={480} className="w-full object-cover" priority />
+                            <Image src="/images/embValentina.jpeg" alt="Embarcación pesquera" width={480} height={480} className="w-full object-cover" priority />
                         </div>
                         <div className="bg-[#1D5093] text-white absolute -bottom-6 -left-6 rounded-xl p-5 shadow-lg hidden lg:block max-w-[220px] transition-transform duration-200 hover:-translate-y-1">
                             <div className="text-[#96BDD8] text-xs mb-1 tracking-wider">ENFOQUE</div>
-                            <div className="font-semibold text-sm leading-snug">Soluciones técnicas con impacto real en los procesos productivos.</div>
+                            <div className="font-semibold text-sm leading-snug">Soluciones técnicas para optimizar procesos y operaciones pesqueras.</div>
                         </div>
                     </div>
                 </div>

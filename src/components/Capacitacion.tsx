@@ -13,7 +13,6 @@ export default function Capacitacion() {
             />
             <div className="absolute inset-0" style={{ background: "rgba(20,30,50,0.87)" }} />
             <div className="absolute inset-0 engineering-grid-light" />
-
             <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 py-24 lg:py-32">
                 <div className="max-w-2xl">
                     <h2

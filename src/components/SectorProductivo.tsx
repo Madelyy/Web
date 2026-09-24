@@ -28,7 +28,7 @@ export default function SectorProductivo() {
                                     <div className="bg-[#4A7AB5] w-6 h-px mb-3" />
                                     <div
                                         className="font-semibold text-sm mb-1.5"
-                                        style={{ color: `#EEF3FA`, fontFamily: `var(--font-display)` }}
+                                        style={{ color: `#1C2B3D`, fontFamily: `var(--font-display)` }}
                                     >
                                         {c.title}
                                     </div>
@@ -41,7 +41,7 @@ export default function SectorProductivo() {
                         className="rounded-xl overflow-hidden"
                         style={{ boxShadow: `0 16px 48px rgba(28,43,61,0.10)` }}
                     >
-                        <img src="https://images.unsplash.com/photo-1779517935471-6d3ec8754734?w=700&h=600&fit=crop&auto=format" alt="Trabajadores en planta pesquera clasificando productos" className="w-full h-[500px] object-cover" />
+                        <img src="/images/sectorEmbarcaciones.png" alt="Trabajadores en planta pesquera clasificando productos" className="w-full h-[500px] object-cover" />
                     </div>
                 </div>
             </div>

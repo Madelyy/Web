@@ -5,30 +5,30 @@ export const serviciosData = [
         num: "01",
         icon: <IconClipboard />,
         title: "Expedientes técnicos",
-        desc: "Elaboración de expedientes técnicos para proyectos de inversión.",
+        desc: "Elaboración y asesoramiento técnico para proyectos y embarcaciones pesqueras.",
         details: {
-            desc: "descicio orientado a la elaboración y asesoramiento técnico de expedientes para proyectos de inversión, integrando criterios de ingeniería, planificación y documentación técnica.",
+            desc: "Servicio orientado a la elaboración y asesoramiento técnico de expedientes para proyectos, embarcaciones y operaciones pesqueras.",
             includes: [
                 "Elaboración y desarrollo de expedientes técnicos.",
-                "Asesoramiento técnico para proyectos de inversión.",
+                "Asesoramiento técnico para proyectos pesqueros.",
                 "Organización y revisión de documentación técnica.",
-                "Apoyo en la definición de soluciones para el proyecto."
+                "Apoyo en la definición de soluciones para embarcaciones y operaciones."
             ]
         }
     },
     {
         num: "02",
         icon: <IconBuilding />,
-        title: "Arquitectura e ingeniería",
-        desc: "Asesoramiento en arquitectura, diseño e ingeniería aplicada a vivienda, construcción e infraestructura.",
+        title: "Ingeniería y embarcaciones",
+        desc: "Asesoramiento técnico aplicado a embarcaciones, instalaciones y operaciones pesqueras.",
         details: {
-            desc: "Brindamos asesoramiento técnico en arquitectura, diseño e ingeniería aplicado a proyectos del sector vivienda, construcción e infraestructura.",
+            desc: "Brindamos asesoramiento técnico en ingeniería y diseño aplicado a embarcaciones, instalaciones y proyectos del sector pesquero.",
             includes: [
-                "Asesoramiento en arquitectura y diseño.",
-                "Desarrollo de propuestas técnicas.",
-                "Orientación en soluciones de ingeniería.",
-                "Asesoramiento para proyectos de vivienda y construcción.",
-                "Apoyo técnico en la planificación del proyecto."
+                "Asesoramiento técnico para embarcaciones pesqueras.",
+                "Desarrollo de propuestas y soluciones técnicas.",
+                "Orientación en aspectos de ingeniería.",
+                "Asesoramiento para instalaciones y operaciones pesqueras.",
+                "Apoyo técnico en la planificación de proyectos."
             ]
         }
     },
@@ -38,13 +38,13 @@ export const serviciosData = [
         title: "Gestión de la calidad",
         desc: "Implementación, evaluación y mejora de sistemas y procesos de calidad.",
         details: {
-            desc: "descicio dirigido a empresas del sector productivo que buscan fortalecer sus sistemas y procesos de gestión de la calidad.",
+            desc: "Servicio dirigido a empresas pesqueras y del sector productivo que buscan fortalecer sus sistemas y procesos de gestión de la calidad.",
             includes: [
                 "Asesoramiento en gestión de la calidad.",
-                "Evaluación de procesos.",
+                "Evaluación de procesos y operaciones.",
                 "Identificación de oportunidades de mejora.",
                 "Implementación y seguimiento de acciones de mejora.",
-                "Orientación para el fortalecimiento de los sistemas de calidad."
+                "Fortalecimiento de sistemas de gestión."
             ]
         }
     },
@@ -52,7 +52,7 @@ export const serviciosData = [
         num: "04",
         icon: <IconShield />,
         title: "Calidad e inocuidad alimentaria",
-        desc: "Consultoría especializada para empresas pesqueras, alimentarias y productivas.",
+        desc: "Consultoría especializada para empresas pesqueras y del sector alimentario.",
         details: {
             desc: "Brindamos consultoría especializada en gestión de la calidad e inocuidad para empresas vinculadas al sector pesquero, alimentario y productivo.",
             includes: [
@@ -60,7 +60,7 @@ export const serviciosData = [
                 "Orientación en sistemas de inocuidad alimentaria.",
                 "Evaluación y mejora de procesos.",
                 "Identificación de oportunidades de mejora.",
-                "Capacitación relacionada con calidad e inocuidad."
+                "Capacitación en calidad e inocuidad."
             ]
         }
     },
@@ -68,14 +68,14 @@ export const serviciosData = [
         num: "05",
         icon: <IconLeaf />,
         title: "Gestión ambiental",
-        desc: "Gestión de calidad, desempeño ambiental y aseguramiento de procesos.",
+        desc: "Asesoramiento en gestión ambiental y mejora del desempeño operativo.",
         details: {
-            desc: "descicio orientado a apoyar a las organizaciones en la gestión de aspectos ambientales y en el fortalecimiento de sus procesos relacionados con el desempeño ambiental.",
+            desc: "Servicio orientado a apoyar a las organizaciones del sector pesquero y productivo en la gestión de aspectos ambientales y el fortalecimiento de sus procesos.",
             includes: [
                 "Asesoramiento en gestión ambiental.",
                 "Evaluación del desempeño ambiental.",
                 "Orientación para la mejora de procesos.",
-                "Capacitación relacionada con gestión ambiental.",
+                "Capacitación en gestión ambiental.",
                 "Asesoramiento para el cumplimiento de requisitos aplicables."
             ]
         }
@@ -84,16 +84,16 @@ export const serviciosData = [
         num: "06",
         icon: <IconUsers />,
         title: "Capacitación profesional",
-        desc: "Programas técnicos e in-house adaptados a cada organización.",
+        desc: "Programas técnicos especializados para empresas y profesionales del sector.",
         details: {
-            desc: "Diseñamos y desarrollamos programas de capacitación dirigidos a profesionales y organizaciones, de acuerdo con sus necesidades técnicas y operativas.",
+            desc: "Diseñamos y desarrollamos programas de capacitación para profesionales y organizaciones, adaptados a sus necesidades técnicas y operativas.",
             includes: [
                 "Capacitaciones técnicas especializadas.",
                 "Programas in-house para empresas.",
                 "Capacitación en gestión de la calidad.",
                 "Capacitación en inocuidad alimentaria.",
-                "Capacitación relacionada con gestión ambiental.",
-                "Capacitación en legislación nacional e internacional."
+                "Capacitación en gestión ambiental.",
+                "Capacitación en normativa pesquera y técnica."
             ]
         }
     },
@@ -101,13 +101,13 @@ export const serviciosData = [
         num: "07",
         icon: <IconTrend />,
         title: "Consultoría de gestión",
-        desc: "Mejora de procesos, sistemas y desempeño organizacional.",
+        desc: "Optimización de procesos, operaciones y sistemas de gestión.",
         details: {
-            desc: "Ofrecemos asesoramiento especializado para identificar oportunidades de mejora y fortalecer los procesos y sistemas de gestión de las organizaciones.",
+            desc: "Ofrecemos asesoramiento especializado para identificar oportunidades de mejora y fortalecer los procesos y sistemas de gestión de organizaciones pesqueras y productivas.",
             includes: [
-                "Diagnóstico de procesos.",
+                "Diagnóstico de procesos y operaciones.",
                 "Identificación de oportunidades de mejora.",
-                "Asesoramiento para la optimización de procesos.",
+                "Optimización de procesos productivos.",
                 "Fortalecimiento de sistemas de gestión.",
                 "Acompañamiento en la implementación de mejoras."
             ]
@@ -116,16 +116,16 @@ export const serviciosData = [
     {
         num: "08",
         icon: <IconBook />,
-        title: "Legislación nacional e internacional",
-        desc: "Asesoramiento sobre requisitos técnicos, legales y normativos.",
+        title: "Legislación y normativa",
+        desc: "Asesoramiento sobre requisitos técnicos, legales y normativos del sector.",
         details: {
-            desc: "Brindamos asesoramiento sobre requisitos legales, técnicos y normativos relacionados con las actividades y procesos de las organizaciones.",
+            desc: "Brindamos asesoramiento sobre requisitos legales, técnicos y normativos relacionados con las actividades pesqueras y productivas.",
             includes: [
                 "Asesoramiento sobre requisitos normativos.",
                 "Orientación sobre legislación nacional.",
-                "Revisión de requisitos aplicables a las actividades de la organización.",
+                "Revisión de requisitos aplicables al sector pesquero.",
                 "Capacitación en aspectos normativos.",
-                "Orientación sobre requisitos internacionales relacionados con el descicio."
+                "Orientación sobre requisitos internacionales relacionados con el sector."
             ]
         }
     },

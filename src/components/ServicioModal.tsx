@@ -16,11 +16,11 @@ export default function ServicioModal({
 }: ServicioModalProps) {
     return (
         <div
-            className="bg-[#1C2B3D]/60 fixed inset-0 z-50 flex items-center justify-center p-6"
+            className="bg-[#1C2B3D]/60 fixed inset-0 z-50 flex items-center justify-center p-8"
             onClick={onClose}
         >
             <div
-                className={`pop relative w-150 rounded-2xl bg-white p-10 lg:p-12 shadow-2xl ${isClosing ? `close` : `pop`}`}
+                className={`pop relative w-150 rounded-2xl bg-white p-8 lg:p-10 shadow-2xl ${isClosing ? `close` : `pop`}`}
                 onClick={(e) => e.stopPropagation()}
             >
                 <button
@@ -48,11 +48,8 @@ export default function ServicioModal({
                 >
                     {service.title}
                 </h2>
-                <p className="text-[#6E85A0] leading-relaxed">
-                    {service.desc}
-                </p>
                 <div className="my-5 h-px bg-[#DDE8F5]" />
-                <div className="flex gap-10">
+                <div className="flex gap-6">
                     <IconClipboard />
                     <div>
                         <h3
@@ -75,25 +72,6 @@ export default function ServicioModal({
                                 </li>
                             ))}
                         </ul>
-                    </div>
-                </div>
-                <div className="my-5 h-px bg-[#DDE8F5]" />
-                <div className="flex gap-10">
-                    <IconTarget />
-                    <div>
-                        <h3
-                            className="font-bold text-lg mb-2"
-                            style={{
-                                color: "#1C2B3D",
-                                fontFamily: "var(--font-display)",
-                            }}
-                        >
-                            Enfoque
-                        </h3>
-
-                        <p className="text-sm text-[#6E85A0] leading-relaxed">
-                            {service.details.desc}
-                        </p>
                     </div>
                 </div>
                 <div className="pt-10 flex justify-end">

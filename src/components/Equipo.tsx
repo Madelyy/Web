@@ -3,7 +3,7 @@ import { IconMail, IconPhone } from "./Icons";
 
 export default function Equipo() {
     return (
-        <section id="equipo" className="reveal bg-[#1E3347] relative py-0 overflow-hidden" style={{ minHeight: `500px` }}>
+        <section id="equipo" className="reveal bg-[#243F73] relative py-0 overflow-hidden" style={{ minHeight: `500px` }}>
             <div className="absolute inset-0 engineering-grid-light" />
             <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 py-24 lg:py-32">
                 <div className="max-w text-center">
@@ -18,8 +18,8 @@ export default function Equipo() {
                     {equipoData.map((e) => (
                         <div
                             key={e.cargo}
-                            className="bg-[#1E3347]/65 rounded-xl p-6 transition-all duration-300 hover:-translate-y-1"
-                            style={{ border: `1px solid rgba(74,122,181,0.28)` }}
+                            className="bg-white/5 rounded-xl p-6 transition-all duration-300 hover:-translate-y-1"
+                            style={{ border: `1px solid rgba(255,255,255,0.12)` }}
                         >
                             <div
                                 className="text-xs font-bold tracking-widest"
@@ -35,17 +35,17 @@ export default function Equipo() {
                             </h3>
                             <p
                                 className="text-xs leading-relaxed"
-                                style={{ color: `rgba(255,255,255,0.45)` }}
+                                style={{ color: `rgba(255,255,255,0.65)` }}
                             >
                                 {e.desc}
                             </p>
-                            <div className="my-5 h-px bg-[#4C9BC7]/40" />
-                            <div className="flex flex-col text-sm gap-5 text-[#78B9DF]">
-                                <div className="flex gap-5">
+                            <div className="my-5 h-px bg-white/25" />
+                            <div className="flex flex-col text-xs gap-5 text-[#96BDD8]">
+                                <div className="flex gap-3">
                                     <IconMail />
                                     <p>{e.correo}</p>
                                 </div>
-                                <div className="flex gap-5">
+                                <div className="flex gap-3">
                                     <IconPhone />
                                     <p>+51 {e.telefono}</p>
                                 </div>

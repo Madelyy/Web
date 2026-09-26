@@ -7,7 +7,7 @@ export default function CTA() {
                 className="absolute inset-0"
                 style={{ backgroundImage: `url(/images/embarcacionMariangella.jpeg)`, backgroundSize: `cover`, backgroundPosition: `center` }}
             />
-            <div className="bg-[rgba(20,30,50,0.90)]/90 absolute inset-0" />
+            <div className="bg-[rgb(36,63,115,0.9)] absolute inset-0" />
             <div className="absolute inset-0 engineering-grid-light" />
             <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 text-center">
                 <h2
@@ -16,7 +16,7 @@ export default function CTA() {
                 >
                     ¿Tienes un proyecto o desafío técnico?
                 </h2>
-                <p className="text-white/65 text-lg mb-10 max-w-xl mx-auto leading-relaxed">
+                <p className="text-white/85 text-lg mb-10 max-w-xl mx-auto leading-relaxed">
                     Conversemos sobre cómo podemos ayudarte a desarrollar, gestionar y
                     mejorar tu proyecto u organización.
                 </p>

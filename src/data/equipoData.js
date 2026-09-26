@@ -17,10 +17,10 @@ export const equipoData = [
     },
     {
         cargo: "2Cargo",
-        nombre: "Pedro Humberto Saravia Almeyda",
+        nombre: "Nombre",
         especialidad: "Ingeniero Pesquero",
         desc: "Responsable de la dirección y gestión estratégica de Albatros Asociados SAC, enfocada en las necesidades del sector pesquero y productivo.",
-        correo: "pedro.saravia@albatrosperu.com",
-        telefono: "990 184 822"
+        correo: "correo@",
+        telefono: "999 888 777"
     }
 ]

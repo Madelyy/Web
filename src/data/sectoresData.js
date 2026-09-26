@@ -23,4 +23,4 @@ export const sectoresData = [
         title: "Gestión ambiental", 
         desc: "Calidad, desempeño ambiental y sostenibilidad." 
     },
-]
+];

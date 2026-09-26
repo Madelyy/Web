@@ -39,7 +39,7 @@ export default function HeaderSection() {
                 style={{ height: scrolled ? `60px` : `80px` }}
             >
                 <Image
-                    src={"/images/logoA.png"}
+                    src={"/images/logoA_4B6FAE.png"}
                     alt="Albatros Asociados SAC"
                     height={250}
                     width={250}
@@ -61,7 +61,7 @@ export default function HeaderSection() {
                 <div className="hidden lg:flex">
                     <a
                         href="#contacto"
-                        className="bg-[#4A7AB5] text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-all duration-200 hover:bg-[#6B9CC4]"
+                        className="bg-[#4B6FAE] text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-all duration-200 hover:bg-[#6B9CC4]"
                         style={{
                             fontFamily: `var(--font-display)`,
                         }}

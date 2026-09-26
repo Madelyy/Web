@@ -10,7 +10,7 @@ export default function Hero() {
             />
             <div
                 className="absolute inset-0"
-                style={{ backgroundImage: `linear-gradient(155deg, rgba(20,30,50,0.89) 0%, rgba(20,30,50,0.68) 50%, rgba(16,28,46,0.92) 100%)` }}
+                style={{ backgroundImage: `linear-gradient(155deg, rgba(20,30,50,0.89) 0%, rgb(36,63,115,0.58) 50%, rgb(36,63,115,0.7) 100%` }}
             />
             <div className="absolute inset-0 engineering-grid-light" />
             <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 pb-20 pt-32 w-full">
@@ -28,7 +28,7 @@ export default function Hero() {
                     >
                         Ingeniería y gestión para impulsar el sector pesquero y productivo.
                     </h1>
-                    <p className="text-white/65 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
+                    <p className="text-white/85 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
                         Capacitación, consultoría y asesoramiento técnico especializado en ingeniería, gestión de la calidad, inocuidad, medio ambiente y procesos productivos.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 mb-16">

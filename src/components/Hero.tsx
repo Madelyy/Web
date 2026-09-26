@@ -41,7 +41,7 @@ export default function Hero() {
                         </a>
                         <a
                             href="#contacto"
-                            className="bg-white/10 inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-sm transition-all duration-200 hover:bg-white/20"
+                            className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-sm transition-all duration-200 hover:bg-white/10"
                             style={{ border: `1px solid rgba(255,255,255,0.5)`, color: `#fff`, fontFamily: `var(--font-display)` }}
                         >
                             Solicitar asesoría

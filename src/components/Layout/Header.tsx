@@ -9,8 +9,8 @@ export default function HeaderSection() {
     const navLinks = [
         "Inicio",
         "Nosotros",
+        "Equipo",
         "Servicios",
-        "Sectores",
         "Experiencia",
         "Contacto",
     ]

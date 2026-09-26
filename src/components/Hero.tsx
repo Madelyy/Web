@@ -10,7 +10,7 @@ export default function Hero() {
             />
             <div
                 className="absolute inset-0"
-                style={{ backgroundImage: `linear-gradient(155deg, rgba(20,30,50,0.89) 0%, rgb(36,63,115,0.58) 50%, rgb(36,63,115,0.7) 100%` }}
+                style={{ backgroundImage: `linear-gradient(155deg, rgb(36,63,115,0.5) 0%, rgb(36,63,115,0.58) 50%, rgb(36,63,115,0.7) 100%` }}
             />
             <div className="absolute inset-0 engineering-grid-light" />
             <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 pb-20 pt-32 w-full">
@@ -41,8 +41,8 @@ export default function Hero() {
                         </a>
                         <a
                             href="#contacto"
-                            className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-sm transition-all duration-200 hover:bg-white/10"
-                            style={{ border: `1px solid rgba(255,255,255,0.3)`, color: `#fff`, fontFamily: `var(--font-display)` }}
+                            className="bg-white/20 inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-sm transition-all duration-200 hover:bg-white/25"
+                            style={{ border: `1px solid rgba(255,255,255,0.5)`, color: `#fff`, fontFamily: `var(--font-display)` }}
                         >
                             Solicitar asesoría
                         </a>
@@ -50,7 +50,7 @@ export default function Hero() {
                 </div>
             </div>
             <div
-                className="absolute bottom-[-1px] left-0 right-0 h-24 pointer-events-none"
+                className="absolute bottom-[-1px] left-0 right-0 h-22 pointer-events-none"
                 style={{ background: "linear-gradient(to top, #fff, transparent)" }}
             />
         </section>

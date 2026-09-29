@@ -27,12 +27,12 @@ export const proyectosData = [
         sector: "Embarcaciones pesqueras",
         servicio: "Auditoría e inspección técnica",
         desc: "Evaluación técnica de embarcaciones pesqueras para verificar condiciones operativas, cumplimiento de requisitos y oportunidades de mejora.",
-        img: "/images/embarcacionesPesqueras.jpg"
+        img: "/images/industriaPesquera.png"
     },
     {
         sector: "Industria pesquera",
         servicio: "Legislación y cumplimiento",
         desc: "Asesoramiento en requisitos técnicos, legales y normativos aplicables a empresas del sector pesquero.",
-        img: "/images/industriaPesquera.png"
+        img: "/images/normativaPesqueria.jpg"
     },
 ]

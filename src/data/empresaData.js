@@ -16,9 +16,9 @@ export const empresaData = [
         label: "Teléfono",
         value: "+51 990 184 822"
     },
-    {
-        icon: <IconClock />,
-        label: "Horario",
-        value: "Lun - Vie..."
-    }
+    //{
+    //  icon: <IconClock />,
+    // label: "Horario",
+    //  value: "Lun - Vie..."
+    //}
 ]

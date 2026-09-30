@@ -15,7 +15,7 @@ export default function VisitaTracker() {
                 if (/tablet|ipad/i.test(userAgent)) {
                     dispositivo = "Tablet"
                 } else if (/mobile|android|iphone/i.test(userAgent)) {
-                    dispositivo = "Móvil"
+                    dispositivo = "Mobile"
                 }
 
                 let navegador = "Desconocido"

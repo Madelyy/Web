@@ -4,8 +4,6 @@ import { useEffect } from "react";
 
 export default function VisitaTracker() {
     useEffect(() => {
-        console.log("Funcionando")
-
         const registrarVisita = async () => {
             try {
                 const userAgent = navigator.userAgent;
@@ -18,7 +16,7 @@ export default function VisitaTracker() {
                     dispositivo = "Mobile"
                 }
 
-                let navegador = "Desconocido"
+                let navegador = "Unknown"
 
                 if (/edg/i.test(userAgent)) {
                     navegador = "Edge"

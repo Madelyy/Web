@@ -1,9 +1,17 @@
 "use client";
-
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 
 export default function VisitaTracker() {
+    const pathname = usePathname()
+    const registrado = useRef(false)
+
     useEffect(() => {
+        if (pathname !== "/") return
+        if (registrado.current) return
+
+        registrado.current = true
+
         const registrarVisita = async () => {
             try {
                 const userAgent = navigator.userAgent;
@@ -41,10 +49,11 @@ export default function VisitaTracker() {
             } catch (error) {
                 console.error("No se pudo registrar la visita:", error)
             }
-        };
+        }
 
         registrarVisita()
-    }, []);
+
+    }, [pathname])
 
     return null
 }

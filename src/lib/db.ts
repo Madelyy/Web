@@ -6,6 +6,7 @@ export const db = mysql.createPool({
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
     port: Number(process.env.DB_PORT || 3306),
+    timezone: "-05:00",
     ssl: {
         rejectUnauthorized: false
     }

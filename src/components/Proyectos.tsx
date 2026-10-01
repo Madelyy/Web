@@ -6,7 +6,6 @@ export default function Proyectos() {
             id="experiencia"
             className="reveal relative bg-[#EEF3FA] py-24 lg:py-32 overflow-hidden"
         >
-            {/* Cuadrícula técnica sutil de fondo, se desvanece hacia abajo */}
             <div
                 aria-hidden="true"
                 className="pointer-events-none absolute inset-0"
@@ -18,9 +17,7 @@ export default function Proyectos() {
                     WebkitMaskImage: `linear-gradient(to bottom, black 0%, transparent 65%)`,
                 }}
             />
-
             <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
-                {/* Encabezado */}
                 <div className="mb-14 lg:mb-16">
                     <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
                         <div className="flex gap-5">
@@ -52,8 +49,6 @@ export default function Proyectos() {
                         </p>
                     </div>
                 </div>
-
-                {/* Tarjetas */}
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                     {proyectosData.map((p, i) => (
                         <article
@@ -64,7 +59,6 @@ export default function Proyectos() {
                                 boxShadow: `0 1px 2px rgba(28,43,61,0.04), 0 8px 24px -8px rgba(28,43,61,0.10)`,
                             }}
                         >
-                            {/* Imagen */}
                             <div className="relative overflow-hidden h-52">
                                 <img
                                     src={p.img}
@@ -72,7 +66,6 @@ export default function Proyectos() {
                                     loading="lazy"
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
-                                {/* Velo azul muy suave para unificar las fotos */}
                                 <div
                                     aria-hidden="true"
                                     className="absolute inset-0"
@@ -80,7 +73,6 @@ export default function Proyectos() {
                                         background: `linear-gradient(to top, rgba(28,43,61,0.35), rgba(28,43,61,0) 55%)`,
                                     }}
                                 />
-                                {/* Sector sobre la imagen */}
                                 <span
                                     className="absolute left-4 bottom-4 text-xs font-semibold px-3 py-1 rounded-full bg-white/95 backdrop-blur-sm"
                                     style={{ color: `#2E52A8` }}
@@ -88,8 +80,6 @@ export default function Proyectos() {
                                     {p.sector}
                                 </span>
                             </div>
-
-                            {/* Contenido */}
                             <div className="flex flex-col flex-1 p-6 lg:p-7">
                                 <p className="text-[#445569] text-[15px] leading-relaxed flex-1">
                                     {p.desc}

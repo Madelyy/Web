@@ -28,9 +28,8 @@ export default function Visitas() {
 
     return (
         <div className="min-h-screen bg-[#F4F7FB]">
-            <Sidebar open={false} onClose={() => { }} />
-
-            <main className="min-h-screen lg:ml-64">
+            <Sidebar open={false} onClose={() => { }} active={""} setActive={function (v: string): void { }} />
+            <main className="min-h-screen lg:ml-72">
                 <Resumen
                     data={visitas}
                     dataNavegador={visitasNavegadores}

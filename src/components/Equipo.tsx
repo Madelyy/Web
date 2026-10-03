@@ -18,7 +18,7 @@ export default function Equipo() {
                         className="mx-auto mt-5 h-1 w-12 rounded-full bg-[#96BDD8]"
                     />
                 </div>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-8">
                     {equipoData.map((e) => (
                         <article
                             key={e.cargo}

@@ -14,6 +14,7 @@ import type {
     Contacto,
     Data
 } from "@/types/dashboard";
+import HeaderDashboard from "@/components/Dashboard/Header";
 
 export default function Dashboard() {
     const [visitas, setVisitas] = useState<Data[]>([])
@@ -39,9 +40,10 @@ export default function Dashboard() {
     }, [])
 
     return (
-        <div className="min-h-screen bg-[#F4F7FB]">
-            <Sidebar open={false} onClose={function (): void { }} />
-            <main className="min-h-screen lg:ml-64">
+        <div className="min-h-screen bg-[#F6F8FC]">
+            <Sidebar open={false} onClose={function (): void { }} active={""} setActive={function (v: string): void { }} />
+            <main className="min-h-screen lg:ml-72">
+                <HeaderDashboard />
                 <Resumen
                     data={visitas}
                     contactos={contactosRecientes}
@@ -49,26 +51,7 @@ export default function Dashboard() {
                 />
                 <DispositivoG data={visitas} />
                 <VisitasG data={visitasPorDia} />
-                <Card
-                    className="m-10"
-                    titulo="Últimas consultas"
-                    subtitulo="Solicitudes recibidas desde el formulario de contacto"
-                    right={
-                        <Link
-                            href="/dashboard/contactos"
-                            className="text-sm font-semibold text-[#2E52A8] transition-colors hover:text-[#243F73]"
-                        >
-                            <div className="mt-auto self-start flex items-center gap-2 text-sm after:inset-0">
-                                Ver todas
-                                <span className="transition-transform duration-200 group-hover:translate-x-1">
-                                    <IconArrow />
-                                </span>
-                            </div>
-                        </Link>
-                    }
-                >
-                    <ConsultasTablas contacto={contactosRecientes} />
-                </Card>
+                <ConsultasTablas contacto={contactosRecientes} />
             </main>
         </div>
     )

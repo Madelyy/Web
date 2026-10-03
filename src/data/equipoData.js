@@ -8,19 +8,11 @@ export const equipoData = [
         telefono: "990 184 822"
     },
     {
-        cargo: "1Cargo",
+        cargo: "Ingeniera Pesquera",
         nombre: "Jessica Barrenechea Curo",
         especialidad: "Ingeniero Pesquero",
-        desc: "Responsable de la dirección y gestión estratégica de Albatros Asociados SAC, enfocada en las necesidades del sector pesquero y productivo.",
+        desc: "Responsable de auditorías y seguimiento de procesos técnicos relacionados con el sector pesquero.",
         correo: "jessica.barrenechea@albatrosperu.com",
         telefono: "903 062 978"
     },
-    {
-        cargo: "2Cargo",
-        nombre: "Nombre",
-        especialidad: "Ingeniero Pesquero",
-        desc: "Responsable de la dirección y gestión estratégica de Albatros Asociados SAC, enfocada en las necesidades del sector pesquero y productivo.",
-        correo: "correo@",
-        telefono: "999 888 777"
-    }
 ]

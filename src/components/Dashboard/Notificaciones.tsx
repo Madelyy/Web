@@ -30,7 +30,6 @@ export default function Notificaciones({
 }) {
     const pendientes = contacto.filter((c) => c.estado === "Pendiente");
 
-    // Cerrar con Escape
     useEffect(() => {
         const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
         document.addEventListener("keydown", onKey);

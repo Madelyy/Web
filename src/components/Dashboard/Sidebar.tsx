@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Icon from "../Icons/IconsDashboard";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 export default function Sidebar({ open, onClose, active, setActive }: { open: boolean; onClose: () => void, active: string, setActive: (v: string) => void }) {
     const pathname = usePathname();
@@ -18,7 +19,13 @@ export default function Sidebar({ open, onClose, active, setActive }: { open: bo
             <aside className={`fixed inset-y-0 left-0 z-50 flex w-72 flex-col transition-transform duration-300 lg:translate-x-0 ${open ? "translate-x-0" : "-translate-x-full"}`} style={{ background: `#243F73` }}>
                 <div className="flex h-24 items-center justify-between px-7" style={{ borderBottom: `1px solid rgba(255,255,255,0.15)` }}>
                     <Image src="/images/logoB.png" alt="Albatros Asociados SAC" width="300" height="300" priority />
-                    <button className="text-white/60 lg:hidden" onClick={onClose} aria-label="Cerrar menú"><Icon name="close" /></button>
+                    <button
+                        className="text-white/60 lg:hidden"
+                        onClick={onClose}
+                        aria-label="Cerrar menú"
+                    >
+                        <Icon name="close" />
+                    </button>
                 </div>
                 <div className="mx-6 h-px bg-white/10" />
                 <nav className="flex-1 space-y-1.5 px-4 py-6" aria-label="Panel">

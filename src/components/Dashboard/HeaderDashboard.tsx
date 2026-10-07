@@ -1,23 +1,35 @@
 import { useState } from "react";
 import Icon from "../Icons/IconsDashboard";
 
-export default function HeaderDashboard() {
-    const [menuOpen, setMenuOpen] = useState(false)
-    const [active, setActive] = useState("Vista general")
-    const [searchOpen, setSearchOpen] = useState(false)
-    const [toast, setToast] = useState("")
-    const notify = (message: string) => { setToast(message); window.setTimeout(() => setToast(""), 2200) }
+export default function HeaderDashboard({
+    setMenuOpen,
+    setNotificacionesOpen
+}: {
+    setMenuOpen: () => void
+    setNotificacionesOpen: () => void
+}) {
+    const [searchOpen, setSearchOpen] = useState(false);
 
     return (
-        <header className="sticky top-0 z-30 flex h-20 items-center justify-between border-b bg-white/90 px-4 backdrop-blur-xl sm:px-7 lg:px-10" style={{ borderColor: `#DCE5F2` }}>
+        <header
+            className="sticky top-0 z-30 flex h-20 items-center justify-between border-b bg-white/90 px-4 backdrop-blur-xl sm:px-7 lg:px-10"
+            style={{ borderColor: `#DCE5F2` }}
+        >
             <div className="flex items-center gap-3">
-                <button className="rounded-lg p-2 lg:hidden" style={{ color: `#243F73`, background: `#EEF3FA` }} onClick={() => setMenuOpen(true)} aria-label="Abrir menú"><Icon name="menu" /></button>
+                <button
+                    className="rounded-lg p-2 lg:hidden"
+                    style={{ color: `#243F73`, background: `#EEF3FA` }}
+                    onClick={() => setMenuOpen()}
+                    aria-label="Abrir menú"
+                >
+                    <Icon name="menu" />
+                </button>
                 <div className={`hidden items-center rounded-xl border px-3 py-2 sm:flex ${searchOpen ? "w-72" : "w-52"} transition-all`} style={{ borderColor: `#DCE5F2`, color: `#718198` }}><Icon name="search" size={17} /><input onFocus={() => setSearchOpen(true)} onBlur={() => setSearchOpen(false)} className="ml-2 w-full bg-transparent text-xs outline-none placeholder:text-slate-400" placeholder="Buscar proyectos..." /></div>
             </div>
             <div className="flex items-center gap-2 sm:gap-4">
                 <button
-                    onClick={() => notify("No tienes notificaciones pendientes")}
-                    className="relative rounded-xl p-2.5"
+                    onClick={() => setNotificacionesOpen()}
+                    className="relative rounded-xl p-2.5 cursor-pointer"
                     style={{ background: `#EEF3FA`, color: `#243F73` }}
                     aria-label="Notificaciones"
                 >

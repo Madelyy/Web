@@ -5,15 +5,15 @@ import { IconArrow } from "./Icons";
 import ServicioModal from "./ServicioModal";
 
 export default function Servicios() {
-    const [selectedService, setSelectedService] = useState<(typeof serviciosData)[number] | null>(null);
-    const [isClosing, setIsClosing] = useState(false);
+    const [selectedService, setSelectedService] = useState<(typeof serviciosData)[number] | null>(null)
+    const [isClosing, setIsClosing] = useState(false)
 
     const closeModal = () => {
-        setIsClosing(true);
+        setIsClosing(true)
 
         setTimeout(() => {
-            setSelectedService(null);
-            setIsClosing(false);
+            setSelectedService(null)
+            setIsClosing(false)
         }, 175);
     };
 

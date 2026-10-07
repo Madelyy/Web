@@ -17,7 +17,6 @@ export default function ServicioModal({
     isClosing,
     onClose
 }: ServicioModalProps) {
-    // Cerrar con Escape y bloquear el scroll de la página mientras está abierto
     useEffect(() => {
         const onKey = (e: KeyboardEvent) => {
             if (e.key === "Escape") onClose();
@@ -43,14 +42,11 @@ export default function ServicioModal({
                 className={`pop relative flex flex-col w-full sm:max-w-[640px] max-h-[85dvh] bg-white overflow-hidden rounded-2xl shadow-2xl ${isClosing ? `close` : ``}`}
                 onClick={(e) => e.stopPropagation()}
             >
-                {/* Barra de acento */}
                 <div
                     aria-hidden="true"
                     className="h-1 shrink-0"
                     style={{ background: `linear-gradient(90deg, #2E52A8, #4A7AB5)` }}
                 />
-
-                {/* Encabezado */}
                 <div className="shrink-0 flex items-start justify-between gap-4 px-6 sm:px-9 pt-6 sm:pt-8 pb-5" style={{ background: `#F5F8FC`, borderBottom: `1px solid #DDE8F5` }}>
                     <div className="min-w-0">
                         <span
@@ -77,8 +73,6 @@ export default function ServicioModal({
                         <IconX />
                     </button>
                 </div>
-
-                {/* Contenido con scroll propio */}
                 <div className="flex-1 overflow-y-auto px-6 sm:px-9 py-6 sm:py-8">
                     <div className="flex items-center gap-3 mb-5">
                         <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#EBF0FA] text-[#2E52A8]">
@@ -91,7 +85,6 @@ export default function ServicioModal({
                             ¿Qué comprende?
                         </h3>
                     </div>
-
                     <ul className="space-y-3">
                         {service.details.includes.map((item: string) => (
                             <li key={item} className="flex gap-3 text-[15px] leading-relaxed text-[#334A63]">
@@ -106,8 +99,6 @@ export default function ServicioModal({
                         ))}
                     </ul>
                 </div>
-
-                {/* Pie fijo: la acción siempre está visible, también en móvil */}
                 <div
                     className="shrink-0 flex flex-col-reverse sm:flex-row sm:justify-end gap-3 px-6 sm:px-9 py-5 bg-white"
                     style={{ borderTop: `1px solid #DDE8F5`, paddingBottom: `max(1.25rem, env(safe-area-inset-bottom))` }}
@@ -123,8 +114,6 @@ export default function ServicioModal({
                     <a
                         href="#contacto"
                         onClick={(e) => {
-                            // El scroll de la página está bloqueado mientras el modal existe,
-                            // así que se cierra primero y se baja a la sección después.
                             e.preventDefault();
                             onClose();
                             setTimeout(() => {

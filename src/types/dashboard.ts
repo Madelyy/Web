@@ -25,3 +25,11 @@ export type Contacto = {
     estado: string
     fecha_registro: string
 }
+
+export type Notificacion = {
+    id: number
+    mensaje: string
+    tipo: string
+    fecha: string
+    leida: boolean
+}

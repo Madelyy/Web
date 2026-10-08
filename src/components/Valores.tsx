@@ -28,7 +28,6 @@ export default function Valores() {
                         </p>
                     </div>
                 </div>
-
                 <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
                     {valoresData.map((v) => (
                         <article

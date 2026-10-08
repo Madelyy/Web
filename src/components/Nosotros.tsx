@@ -6,7 +6,6 @@ export default function Nosotros() {
         <section id="nosotros" className="reveal py-24 lg:py-32 bg-white">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
                 <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-                    {/* Texto + etapas */}
                     <div className="max-w-[520px]">
                         <h2
                             className="text-3xl lg:text-4xl font-bold mb-6 leading-tight"
@@ -23,7 +22,6 @@ export default function Nosotros() {
                             asesoramiento técnico para el sector pesquero y productivo, con experiencia en gestión,
                             calidad, seguridad y mejora de procesos aplicados a embarcaciones y operaciones pesqueras.
                         </p>
-
                         <ol className="rounded-xl bg-[#F5F8FC] p-6" style={{ border: `1px solid #E8EFF8` }}>
                             {etapasData.map((s) => (
                                 <li key={s.num} className="flex gap-5 group">
@@ -49,10 +47,7 @@ export default function Nosotros() {
                             ))}
                         </ol>
                     </div>
-
-                    {/* Imagen + enfoque */}
                     <div className="flex flex-col gap-5 lg:block lg:relative">
-                        {/* Marco desplazado detrás de la imagen */}
                         <div
                             aria-hidden="true"
                             className="hidden lg:block absolute -top-4 -right-4 w-full h-full rounded-xl"
@@ -71,8 +66,6 @@ export default function Nosotros() {
                                 priority
                             />
                         </div>
-
-                        {/* Tarjeta fuera de la foto en móvil; superpuesta en escritorio con borde blanco para separarla */}
                         <div
                             className="rounded-xl p-5 max-w-[260px] bg-[#1D5093] text-white lg:absolute lg:-bottom-8 lg:-left-8 transition-transform duration-200 hover:-translate-y-1"
                             style={{

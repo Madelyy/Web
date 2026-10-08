@@ -33,7 +33,6 @@ export default function Servicios() {
                         Soluciones técnicas para organizaciones que buscan mejorar.
                     </h2>
                 </div>
-
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
                     {serviciosData.map((s) => (
                         <article
@@ -49,7 +48,6 @@ export default function Servicios() {
                                 className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"
                                 style={{ background: `linear-gradient(90deg, #2E52A8, #4A7AB5)` }}
                             />
-
                             <div className="flex items-start justify-between mb-5">
                                 <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#EBF0FA] text-[#2E52A8] transition-colors duration-200 group-hover:bg-[#2E52A8] group-hover:text-white">
                                     {s.icon}
@@ -61,7 +59,6 @@ export default function Servicios() {
                                     {s.num}
                                 </span>
                             </div>
-
                             <h3
                                 className="font-bold text-base mb-2 leading-snug text-[#1C2B3D]"
                                 style={{ fontFamily: `var(--font-display)` }}
@@ -69,7 +66,6 @@ export default function Servicios() {
                                 {s.title}
                             </h3>
                             <p className="text-[#516A85] text-sm leading-relaxed mb-6">{s.desc}</p>
-
                             <button
                                 type="button"
                                 onClick={() => setSelectedService(s)}

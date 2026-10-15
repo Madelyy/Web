@@ -7,11 +7,11 @@ import { useVisitas, useContactos } from "@/hooks/useDashboardData";
 
 
 export default function DashboardPage() {
-    const { data: visitas } = useVisitas();
-    const { data: contactos } = useContactos();
+    const { data: visitas } = useVisitas()
+    const { data: contactos } = useContactos()
 
-    const dispositivos = visitas?.dispositivos ?? [];
-    const recientes = contactos?.contactosRecientes ?? [];
+    const dispositivos = visitas?.dispositivos ?? []
+    const recientes = contactos?.contactos ?? []
 
     return (
         <>

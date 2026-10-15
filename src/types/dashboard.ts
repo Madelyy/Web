@@ -23,7 +23,13 @@ export type Contacto = {
     servicio: string
     mensaje: string
     estado: string
+    plazo: string
     fecha_registro: string
+    cargo: string | null
+    ruc: string | null
+    rsw_cantidad: number
+    convencional_cantidad: number
+    prioridad: "Alta" | "Media" | "Baja"
 }
 
 export type Notificacion = {

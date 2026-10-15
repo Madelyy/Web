@@ -1,10 +1,10 @@
-import { KPICard } from "./KPICard";
-import { PALETTE } from "@/data/palette";
+import { KPICard } from "./KPICard"
+import { PALETTE } from "@/data/palette"
 import type {
     DataNavegador,
     Contacto,
     Data
-} from "@/types/dashboard";
+} from "@/types/dashboard"
 
 type ResumenTipo = "dashboard" | "visitas" | "contactos"
 
@@ -39,6 +39,10 @@ export default function Resumen({
         (contacto) => contacto.estado === "Atendido"
     ).length
 
+    const enProceso = contactos.filter(
+        (contacto) => contacto.estado === "En proceso"
+    ).length
+
     return (
         <>
             {(tipo === "dashboard") && (
@@ -52,9 +56,10 @@ export default function Resumen({
 
             {(tipo === "contactos") && (
                 <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4 p-10 pb-2">
-                    <KPICard label="Contactos" value={totalContacto} delta="8.1%" trend="up" good icon="users" color={PALETTE[4]} />
+                    <KPICard label="Contactos" value={totalContacto} delta="8.1%" trend="up" good icon="users" color={PALETTE[1]} />
                     <KPICard label="Pendientes" value={pendientes} delta="4.2%" trend="down" good icon="folder" color={PALETTE[3]} />
                     <KPICard label="Atendidos" value={atendidos} delta="15.3%" trend="up" good icon="file" color={PALETTE[2]} />
+                    <KPICard label="En proceso" value={enProceso} delta="15.3%" trend="up" good icon="clock" color={PALETTE[4]} />
                 </div>
             )}
 

@@ -8,7 +8,7 @@ export const equipoData = [
         telefono: "990 184 822"
     },
     {
-        cargo: "Ingeniera Pesquera",
+        cargo: "Gerente de Operaciones",
         nombre: "Jessica Barrenechea Curo",
         especialidad: "Ingeniero Pesquero",
         desc: "Responsable de auditorías y seguimiento de procesos técnicos relacionados con el sector pesquero.",

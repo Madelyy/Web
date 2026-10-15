@@ -8,17 +8,11 @@ export default function Hero() {
         >
             <div
                 className="absolute inset-0"
-                style={{
-                    backgroundImage: `url(https://images.unsplash.com/photo-1727517786596-fe89c521318b?w=1600&h=900&fit=crop&auto=format)`,
-                    backgroundSize: `cover`,
-                    backgroundPosition: `center`,
-                }}
+                style={{ backgroundImage: `url('/images/Hero.jpeg')` , backgroundSize: `cover`, backgroundPosition: `center` }}
             />
             <div
                 className="absolute inset-0"
-                style={{
-                    backgroundImage: `linear-gradient(155deg, rgba(20,30,50,0.89) 0%, rgba(36,63,115,0.58) 50%, rgba(36,63,115,0.7) 100%)`,
-                }}
+                style={{ backgroundImage: `linear-gradient(155deg, rgba(20,30,50,0.89) 0%, rgba(36,63,115,0.58) 50%, rgba(36,63,115,0.7) 100%)` }}
             />
             <div aria-hidden="true" className="absolute inset-0 engineering-grid-light" />
 

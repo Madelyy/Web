@@ -1,15 +1,29 @@
-import Link from "next/link";
-import Icon from "../Icons/IconsDashboard";
-import EstadoBadge from "./EstadoBadge";
-import { Contacto } from "@/types/dashboard";
+import Link from "next/link"
+import Icon from "../Icons/IconsDashboard"
+import EstadoBadge from "./EstadoBadge"
+import { Contacto } from "@/types/dashboard"
+import { useState } from "react"
+import { estiloEstado, PRIORIDAD_ESTILOS } from "@/lib/estados"
+import ConsultaDetalle from "./ConsultaDetalle"
 
 const fmt = (n: number) => n.toLocaleString("es-PE");
 
+function PrioridadBadge({ prioridad }: { prioridad?: string }) {
+    const p = prioridad ?? "Media"
+    const s = PRIORIDAD_ESTILOS[p] ?? PRIORIDAD_ESTILOS.Media
+
+    return (
+        <span className="inline-flex rounded-full px-2.5 py-1 text-xs font-semibold" style={{ background: s.bg, color: s.color }}>{p}</span>
+    )
+}
+
 export default function ConsultasTablas({
     contacto,
+    onCambio,
     mostrarVerTodos = true
 }: {
     contacto: Contacto[]
+    onCambio?: (id: number, cambios: Partial<Contacto>) => void
     mostrarVerTodos?: boolean
 }) {
     const formatoFecha = (fecha: string) => {
@@ -19,11 +33,26 @@ export default function ConsultasTablas({
         })
     }
 
+    const [seleccionadoId, setSeleccionadoId] = useState<number | null>(null)
+    const seleccionado = contacto.find((c) => c.id === seleccionadoId) ?? null
+    const editable = Boolean(onCambio)
+
+    const abrir = (id: number) => editable && setSeleccionadoId(id)
+    const filaProps = (id: number) =>
+        editable
+            ? {
+                onClick: () => abrir(id),
+                onKeyDown: (e: React.KeyboardEvent) => (e.key === "Enter" || e.key === " ") && (e.preventDefault(), abrir(id)),
+                tabIndex: 0,
+                role: "button" as const,
+            }
+            : {}
+
     return (
-        <section className="relative overflow-hidden rounded-xl bg-white" style={{
-            border: "1px solid #DDE8F5",
-            boxShadow: "0 1px 2px rgba(28,43,61,0.04), 0 8px 24px -8px rgba(28,43,61,0.10)",
-        }}>
+        <section
+            className="relative overflow-hidden rounded-xl bg-white"
+            style={{ border: "1px solid #DDE8F5", boxShadow: "0 1px 2px rgba(28,43,61,0.04), 0 8px 24px -8px rgba(28,43,61,0.10)", }}
+        >
             <div
                 aria-hidden="true"
                 className="absolute inset-x-0 top-0 h-1"
@@ -43,40 +72,85 @@ export default function ConsultasTablas({
                     </Link>
                 )}
             </div>
-            <div className="overflow-x-auto md:block">
-                <table className="w-full min-w-[680px] text-left">
-                    <thead>
-                        <tr className="text-xs font-semibold text-[#6E85A0] border-y text-[10px] uppercase tracking-wider" style={{ borderBottom: `1px solid #DDE8F5` }} >
-                            <th className="px-10 py-3 font-semibold">Solicitante</th>
-                            <th className="px-10 py-3 font-semibold">Servicio</th>
-                            <th className="px-10 py-3 font-semibold">Fecha</th>
-                            <th className="px-10 py-3 font-semibold">Estado</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {contacto.map((c, id) => (
-                            <tr
+            {contacto.length === 0 ? (
+                <p className="px-6 py-14 text-center text-sm text-[#6E85A0]" style={{ borderTop: "1px solid #E8EFF8" }}>
+                    Aún no hay consultas registradas.
+                </p>
+            ) : (
+                <>
+                    <ul className="md:hidden" style={{ borderTop: "1px solid #E8EFF8" }}>
+                        {contacto.map((c) => (
+                            <li
                                 key={c.id}
-                                className="transition-colors hover:bg-[#F5F8FC]"
-                                style={id < contacto.length - 1 ? { borderBottom: `1px solid #076fff` } : undefined}
+                                {...filaProps(c.id)}
+                                className={`px-5 py-4 ${editable ? "cursor-pointer active:bg-[#F5F8FC]" : ""}`}
+                                style={{ borderBottom: "1px solid #EEF3FA" }}
                             >
-                                <td className="px-10 py-4">
-                                    <div className="flex items-center gap-3">
-                                        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#EBF0FA] text-sm font-bold text-[#2E52A8] uppercase">{c.nombre.split(" ").map((p) => p[0]).slice(0, 2).join("")}</span>
+                                <div className="flex items-start justify-between gap-3">
+                                    <div className="flex min-w-0 items-center gap-3">
+                                        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#EBF0FA] text-sm font-bold text-[#2E52A8]">{c.nombre.split(" ").map((p) => p[0]).slice(0, 2).join("")}</span>
                                         <div className="min-w-0">
                                             <div className="truncate text-sm font-semibold text-[#1C2B3D]">{c.nombre}</div>
                                             <div className="truncate text-xs text-[#6E85A0]">{c.empresa}</div>
                                         </div>
                                     </div>
-                                </td>
-                                <td className="px-10 py-4 text-sm text-[#334A63]">{c.servicio}</td>
-                                <td className="whitespace-nowrap px-10 py-4 text-sm text-[#516A85]]">{formatoFecha(c.fecha_registro)}</td>
-                                <td className="px-10 py-4"><EstadoBadge estado={c.estado} /></td>
-                            </tr>
+                                    <EstadoBadge estado={c.estado} />
+                                </div>
+                                <div className="mt-3 flex items-center justify-between gap-3 text-xs text-[#516A85]">
+                                    <span className="truncate">{c.servicio}</span>
+                                    <span className="flex shrink-0 items-center gap-2">
+                                        <PrioridadBadge prioridad={c.prioridad} />
+                                        {formatoFecha(c.fecha_registro)}
+                                    </span>
+                                </div>
+                            </li>
                         ))}
-                    </tbody>
-                </table>
-            </div>
+                    </ul>
+                    <div className="hidden overflow-x-auto md:block">
+                        <table className="w-full min-w-[680px] text-left">
+                            <thead>
+                                <tr className="text-xs font-semibold text-[#6E85A0] border-y text-[10px] uppercase tracking-wider" style={{ borderBottom: `1px solid #DDE8F5` }} >
+                                    <th className="px-10 py-3 font-semibold">Solicitante</th>
+                                    <th className="px-10 py-3 font-semibold">Servicio</th>
+                                    <th className="px-10 py-3 font-semibold">Fecha</th>
+                                    <th className="px-10 py-3 font-semibold">Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {contacto.map((c, i) => (
+                                    <tr
+                                        key={c.id}
+                                        {...filaProps(c.id)}
+                                        className={`transition-colors hover:bg-[#F5F8FC] ${editable ? "cursor-pointer" : ""}`}
+                                        style={i < contacto.length - 1 ? { borderBottom: "1px solid #EEF3FA" } : undefined}
+                                    >
+                                        <td className="px-6 py-4">
+                                            <div className="flex items-center gap-3">
+                                                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#EBF0FA] text-sm font-bold text-[#2E52A8] uppercase">{c.nombre.split(" ").map((p) => p[0]).slice(0, 2).join("")}</span>
+                                                <div className="min-w-0">
+                                                    <div className="truncate text-sm font-semibold text-[#1C2B3D]">{c.nombre}</div>
+                                                    <div className="truncate text-xs text-[#6E85A0]">{c.empresa}</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td className="px-6 py-4 text-sm text-[#334A63]">{c.servicio}</td>
+                                        <td className="px-6 py-4"><PrioridadBadge prioridad={c.prioridad} /></td>
+                                        <td className="whitespace-nowrap px-6 py-4 text-sm text-[#516A85]">{formatoFecha(c.fecha_registro)}</td>
+                                        <td className="px-6 py-4"><EstadoBadge estado={c.estado} /></td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                </>
+            )}
+            {seleccionado && onCambio && (
+                <ConsultaDetalle
+                    contacto={seleccionado}
+                    onClose={() => setSeleccionadoId(null)}
+                    onCambio={onCambio}
+                />
+            )}
         </section>
     )
 }

@@ -1,9 +1,9 @@
 "use client"
 // → app/dashboard/visitas/page.tsx
-import Resumen from "@/components/Dashboard/Resumen";
-import VisitasG from "@/components/Dashboard/VisitasG";
-import DispositivoG from "@/components/Dashboard/DispositivoG";
-import NavegadorG from "@/components/Dashboard/NavegadorG";
+import Resumen from "@/app/dashboard/Dashboard/Resumen";
+import VisitasG from "@/app/dashboard/Dashboard/VisitasG";
+import DispositivoG from "@/app/dashboard/Dashboard/DispositivoG";
+import NavegadorG from "@/app/dashboard/Dashboard/NavegadorG";
 import { useVisitas } from "@/hooks/useDashboardData";
 
 export default function VisitasPage() {

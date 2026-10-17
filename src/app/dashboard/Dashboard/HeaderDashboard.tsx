@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Icon from "../Icons/IconsDashboard";
+import Icon from "../../../components/Icons/IconsDashboard";
 
 export default function HeaderDashboard({
     setMenuOpen,

@@ -1,26 +1,26 @@
 export const sectoresData = [
-    { 
-        title: "Pesca y embarcaciones", 
-        desc: "Procesamiento, productos hidrobiológicos y procesos productivos." 
+    {
+        title: "Pesca y embarcaciones",
+        desc: "Auditorías sanitarias, inspecciones y documentación técnica para embarcaciones con sistema RSW y convencionales."
     },
-    { 
-        title: "Procesamiento pesquero", 
-        desc: "Calidad, inocuidad y sistemas de gestión alimentaria." 
+    {
+        title: "Procesamiento pesquero",
+        desc: "Calidad, inocuidad e higiene en plantas de procesamiento de productos hidrobiológicos."
     },
-    { 
-        title: "Acuicultura", 
-        desc: "Procesos, producción y mejora organizacional." 
+    {
+        title: "Acuicultura",
+        desc: "Gestión de la calidad, cumplimiento normativo y mejora de procesos para empresas acuícolas."
     },
-    { 
-        title: "Industria pesquera", 
-        desc: "Arquitectura, ingeniería y expedientes técnicos." 
+    {
+        title: "Industria pesquera",
+        desc: "Ingeniería, expedientes técnicos y asesoramiento para instalaciones y operaciones pesqueras."
     },
-    { 
-        title: "Industria alimentaria", 
-        desc: "Desarrollo de documentación técnica para proyectos." 
-    },  
-    { 
-        title: "Gestión ambiental", 
-        desc: "Calidad, desempeño ambiental y sostenibilidad." 
+    {
+        title: "Industria alimentaria",
+        desc: "Sistemas de calidad e inocuidad y documentación técnica para empresas del sector alimentario."
     },
-];
+    {
+        title: "Gestión ambiental",
+        desc: "Evaluación del desempeño ambiental y cumplimiento de requisitos aplicables a operaciones pesqueras."
+    },
+]

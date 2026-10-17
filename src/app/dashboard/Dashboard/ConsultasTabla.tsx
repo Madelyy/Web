@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Icon from "../Icons/IconsDashboard"
+import Icon from "../../../components/Icons/IconsDashboard"
 import EstadoBadge from "./EstadoBadge"
 import { Contacto } from "@/types/dashboard"
 import { useState } from "react"

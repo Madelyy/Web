@@ -1,7 +1,7 @@
 "use client"
-import Resumen from "@/components/Dashboard/Resumen";
+import Resumen from "@/app/dashboard/Dashboard/Resumen";
 import { useContactos } from "@/hooks/useDashboardData";
-import ConsultasTablas from "@/components/Dashboard/ConsultasTabla";
+import ConsultasTablas from "@/app/dashboard/Dashboard/ConsultasTabla";
 import { Contacto } from "@/types/dashboard";
 import { useEffect, useState } from "react";
 

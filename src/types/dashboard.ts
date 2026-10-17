@@ -39,3 +39,20 @@ export type Notificacion = {
     fecha: string
     leida: boolean
 }
+
+export type Nota = {
+    id: number
+    contacto_id: number
+    autor: string
+    texto: string
+    fecha: string
+}
+
+export type Historial = {
+    id: number
+    contacto_id: number
+    estado_anterior: string | null
+    estado_nuevo: string
+    autor: string | null
+    fecha: string
+}

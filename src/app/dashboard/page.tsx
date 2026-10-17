@@ -1,8 +1,8 @@
 "use client"
-import Resumen from "@/components/Dashboard/Resumen";
-import DispositivoG from "@/components/Dashboard/DispositivoG";
-import VisitasG from "@/components/Dashboard/VisitasG";
-import ConsultasTablas from "@/components/Dashboard/ConsultasTabla";
+import Resumen from "@/app/dashboard/Dashboard/Resumen";
+import DispositivoG from "@/app/dashboard/Dashboard/DispositivoG";
+import VisitasG from "@/app/dashboard/Dashboard/VisitasG";
+import ConsultasTablas from "@/app/dashboard/Dashboard/ConsultasTabla";
 import { useVisitas, useContactos } from "@/hooks/useDashboardData";
 
 

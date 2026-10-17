@@ -3,64 +3,70 @@ import { IconBook, IconBuilding, IconClipboard, IconLeaf, IconShield, IconTrend,
 export const serviciosData = [
     {
         num: "01",
-        icon: <IconClipboard />,
-        title: "Expedientes técnicos",
-        desc: "Elaboración y asesoramiento técnico para proyectos y embarcaciones pesqueras.",
+        icon: <IconShield />,
+        title: "Auditorías sanitarias SANIPES",
+        desc: "Preparación y acompañamiento técnico para las auditorías anuales de la Autoridad Sanitaria en embarcaciones pesqueras.",
         details: {
-            desc: "Servicio orientado a la elaboración y asesoramiento técnico de expedientes para proyectos, embarcaciones y operaciones pesqueras.",
+            desc: "Asesoramiento técnico especializado para que las embarcaciones pesqueras, con sistema RSW o convencionales, cumplan las auditorías anuales de la Autoridad Sanitaria (SANIPES) conforme a la normativa sanitaria vigente.",
             includes: [
-                "Elaboración y desarrollo de expedientes técnicos.",
-                "Asesoramiento técnico para proyectos pesqueros.",
-                "Organización y revisión de documentación técnica.",
-                "Apoyo en la definición de soluciones para embarcaciones y operaciones."
+                "Diagnóstico de las condiciones sanitarias de toda la infraestructura de la embarcación.",
+                "Inspección de seguimiento para verificar las condiciones sanitarias antes de la auditoría.",
+                "Elaboración de los manuales de gestión de la calidad de cada embarcación.",
+                "Documentación de los registros de reporte de pesca de la temporada.",
+                "Elaboración de los documentos de comunicación y coordinación ante SANIPES.",
+                "Acompañamiento de un profesional de Albatros durante la auditoría.",
+                "Informes de resultados por etapa y comunicación permanente por correo electrónico.",
+                "Marco normativo de referencia: D.S. N° 020-2022-PRODUCE, Comunicado N° 043-2018-SANIPES y Reglamento (CE) N° 853/2004."
             ]
         }
     },
     {
         num: "02",
-        icon: <IconBuilding />,
-        title: "Ingeniería y embarcaciones",
-        desc: "Asesoramiento técnico aplicado a embarcaciones, instalaciones y operaciones pesqueras.",
+        icon: <IconClipboard />,
+        title: "Manuales y documentos de gestión",
+        desc: "Elaboración de manuales de higiene y saneamiento, buenas prácticas y registros exigidos por la autoridad sanitaria.",
         details: {
-            desc: "Brindamos asesoramiento técnico en ingeniería y diseño aplicado a embarcaciones, instalaciones y proyectos del sector pesquero.",
+            desc: "Desarrollamos la documentación de gestión que exige la autoridad sanitaria, adaptada a las características de cada embarcación y a la norma sanitaria vigente.",
             includes: [
-                "Asesoramiento técnico para embarcaciones pesqueras.",
-                "Desarrollo de propuestas y soluciones técnicas.",
-                "Orientación en aspectos de ingeniería.",
-                "Asesoramiento para instalaciones y operaciones pesqueras.",
-                "Apoyo técnico en la planificación de proyectos."
+                "Manual de Higiene y Saneamiento.",
+                "Manual de Buenas Prácticas a bordo.",
+                "Formatos y registros de reportes de pesca por temporada.",
+                "Procedimientos documentados conforme a la norma sanitaria vigente.",
+                "Organización y revisión de la documentación previa a la auditoría.",
+                "Actualización de los documentos ante cambios normativos o de operación."
             ]
         }
     },
     {
         num: "03",
-        icon: <IconShield />,
-        title: "Gestión de la calidad",
-        desc: "Implementación, evaluación y mejora de sistemas y procesos de calidad.",
+        icon: <IconBuilding />,
+        title: "Inspección y diagnóstico sanitario",
+        desc: "Evaluación de las condiciones sanitarias de embarcaciones e instalaciones, con informe de hallazgos y acciones correctivas.",
         details: {
-            desc: "Servicio dirigido a empresas pesqueras y del sector productivo que buscan fortalecer sus sistemas y procesos de gestión de la calidad.",
+            desc: "Realizamos inspecciones técnicas para identificar brechas sanitarias en la infraestructura y en las operaciones, con recomendaciones claras antes de una auditoría.",
             includes: [
-                "Asesoramiento en gestión de la calidad.",
-                "Evaluación de procesos y operaciones.",
-                "Identificación de oportunidades de mejora.",
-                "Implementación y seguimiento de acciones de mejora.",
-                "Fortalecimiento de sistemas de gestión."
+                "Inspección de la infraestructura sanitaria de embarcaciones pesqueras.",
+                "Evaluación de embarcaciones con sistema RSW y convencionales.",
+                "Revisión de las condiciones de higiene de bodegas, cubiertas y áreas de manipulación.",
+                "Informe de hallazgos con acciones correctivas recomendadas.",
+                "Inspecciones de seguimiento para verificar el cierre de las brechas detectadas."
             ]
         }
     },
     {
         num: "04",
-        icon: <IconShield />,
-        title: "Calidad e inocuidad alimentaria",
-        desc: "Consultoría especializada para empresas pesqueras y del sector alimentario.",
+        icon: <IconTrend />,
+        title: "Gestión de la calidad e inocuidad",
+        desc: "Implementación, evaluación y mejora de sistemas de calidad e inocuidad para empresas pesqueras y alimentarias.",
         details: {
-            desc: "Brindamos consultoría especializada en gestión de la calidad e inocuidad para empresas vinculadas al sector pesquero, alimentario y productivo.",
+            desc: "Consultoría para fortalecer los sistemas de gestión de la calidad e inocuidad en empresas del sector pesquero, alimentario y productivo.",
             includes: [
-                "Asesoramiento en gestión de calidad.",
+                "Diagnóstico de procesos y de sistemas de gestión de la calidad.",
                 "Orientación en sistemas de inocuidad alimentaria.",
-                "Evaluación y mejora de procesos.",
-                "Identificación de oportunidades de mejora.",
-                "Capacitación en calidad e inocuidad."
+                "Identificación de oportunidades de mejora en los procesos.",
+                "Elaboración de procedimientos, formatos y registros.",
+                "Implementación y seguimiento de acciones de mejora.",
+                "Capacitación del personal en calidad e inocuidad."
             ]
         }
     },
@@ -68,48 +74,47 @@ export const serviciosData = [
         num: "05",
         icon: <IconLeaf />,
         title: "Gestión ambiental",
-        desc: "Asesoramiento en gestión ambiental y mejora del desempeño operativo.",
+        desc: "Asesoramiento para la gestión de aspectos ambientales en operaciones pesqueras, plantas y proyectos productivos.",
         details: {
-            desc: "Servicio orientado a apoyar a las organizaciones del sector pesquero y productivo en la gestión de aspectos ambientales y el fortalecimiento de sus procesos.",
+            desc: "Apoyamos a las organizaciones del sector pesquero y productivo en la gestión de sus aspectos ambientales y en el cumplimiento de los requisitos que les son aplicables.",
             includes: [
-                "Asesoramiento en gestión ambiental.",
-                "Evaluación del desempeño ambiental.",
-                "Orientación para la mejora de procesos.",
-                "Capacitación en gestión ambiental.",
-                "Asesoramiento para el cumplimiento de requisitos aplicables."
+                "Evaluación del desempeño ambiental de operaciones y plantas.",
+                "Identificación de aspectos e impactos ambientales.",
+                "Asesoramiento para el cumplimiento de los requisitos aplicables.",
+                "Orientación para la mejora de procesos y el uso eficiente de recursos.",
+                "Capacitación del personal en gestión ambiental."
             ]
         }
     },
     {
         num: "06",
-        icon: <IconUsers />,
-        title: "Capacitación profesional",
-        desc: "Programas técnicos especializados para empresas y profesionales del sector.",
+        icon: <IconBuilding />,
+        title: "Expedientes técnicos e ingeniería",
+        desc: "Elaboración de expedientes técnicos y asesoramiento de ingeniería para embarcaciones, instalaciones y proyectos pesqueros.",
         details: {
-            desc: "Diseñamos y desarrollamos programas de capacitación para profesionales y organizaciones, adaptados a sus necesidades técnicas y operativas.",
+            desc: "Brindamos asesoramiento técnico y elaboramos expedientes para proyectos, embarcaciones, instalaciones y operaciones del sector pesquero.",
             includes: [
-                "Capacitaciones técnicas especializadas.",
-                "Programas in-house para empresas.",
-                "Capacitación en gestión de la calidad.",
-                "Capacitación en inocuidad alimentaria.",
-                "Capacitación en gestión ambiental.",
-                "Capacitación en normativa pesquera y técnica."
+                "Elaboración y desarrollo de expedientes técnicos.",
+                "Asesoramiento técnico para embarcaciones pesqueras.",
+                "Orientación en aspectos de ingeniería de instalaciones y operaciones.",
+                "Organización y revisión de la documentación técnica.",
+                "Apoyo técnico en la planificación de proyectos."
             ]
         }
     },
     {
         num: "07",
-        icon: <IconTrend />,
-        title: "Consultoría de gestión",
-        desc: "Optimización de procesos, operaciones y sistemas de gestión.",
+        icon: <IconUsers />,
+        title: "Capacitación profesional",
+        desc: "Programas técnicos in-house para empresas, tripulaciones y profesionales del sector pesquero.",
         details: {
-            desc: "Ofrecemos asesoramiento especializado para identificar oportunidades de mejora y fortalecer los procesos y sistemas de gestión de organizaciones pesqueras y productivas.",
+            desc: "Diseñamos y desarrollamos programas de capacitación adaptados a las necesidades técnicas y operativas de cada empresa, combinando conocimiento técnico y aplicación práctica.",
             includes: [
-                "Diagnóstico de procesos y operaciones.",
-                "Identificación de oportunidades de mejora.",
-                "Optimización de procesos productivos.",
-                "Fortalecimiento de sistemas de gestión.",
-                "Acompañamiento en la implementación de mejoras."
+                "Programas in-house a la medida de cada organización.",
+                "Capacitación en higiene, saneamiento y buenas prácticas.",
+                "Capacitación en gestión de la calidad e inocuidad alimentaria.",
+                "Capacitación en gestión ambiental.",
+                "Capacitación en normativa pesquera y sanitaria."
             ]
         }
     },
@@ -117,15 +122,15 @@ export const serviciosData = [
         num: "08",
         icon: <IconBook />,
         title: "Legislación y normativa",
-        desc: "Asesoramiento sobre requisitos técnicos, legales y normativos del sector.",
+        desc: "Asesoramiento sobre los requisitos legales, sanitarios y técnicos aplicables a la actividad pesquera.",
         details: {
-            desc: "Brindamos asesoramiento sobre requisitos legales, técnicos y normativos relacionados con las actividades pesqueras y productivas.",
+            desc: "Orientamos a las empresas sobre los requisitos legales, sanitarios y técnicos que regulan las actividades pesqueras y productivas, nacionales e internacionales.",
             includes: [
-                "Asesoramiento sobre requisitos normativos.",
-                "Orientación sobre legislación nacional.",
-                "Revisión de requisitos aplicables al sector pesquero.",
-                "Capacitación en aspectos normativos.",
-                "Orientación sobre requisitos internacionales relacionados con el sector."
+                "Orientación sobre el Reglamento sectorial de actividades pesqueras y acuícolas (D.S. N° 020-2022-PRODUCE).",
+                "Orientación sobre comunicados y disposiciones de SANIPES.",
+                "Orientación sobre requisitos sanitarios internacionales, como el Reglamento (CE) N° 853/2004.",
+                "Revisión de los requisitos aplicables a cada operación.",
+                "Capacitación en aspectos normativos."
             ]
         }
     },

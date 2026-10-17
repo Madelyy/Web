@@ -1,5 +1,5 @@
-import { IconName } from "../Icons/IconsDashboard";
-import Icon from "../Icons/IconsDashboard";
+import { IconName } from "../../../components/Icons/IconsDashboard";
+import Icon from "../../../components/Icons/IconsDashboard";
 
 type KPICard = {
     label: string

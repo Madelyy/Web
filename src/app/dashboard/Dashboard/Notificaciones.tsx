@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import type { Contacto } from "@/types/dashboard";
-import Icon from "../Icons/IconsDashboard";
+import Icon from "../../../components/Icons/IconsDashboard";
 
 const tiempoTranscurrido = (fecha: string) => {
     const diferencia = Date.now() - new Date(fecha).getTime();

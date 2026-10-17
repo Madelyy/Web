@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Icon from "../Icons/IconsDashboard";
+import Icon from "../../../components/Icons/IconsDashboard";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 

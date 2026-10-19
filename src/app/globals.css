@@ -84,7 +84,7 @@ input[name="telefono"]::placeholder {
 @keyframes reveal {
   from {
     opacity: 0.9;
-    filter: blur(0.12rem);
+    filter: blur(0.05rem);
   }
 
   to {

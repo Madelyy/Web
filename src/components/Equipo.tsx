@@ -3,7 +3,7 @@ import { IconMail, IconPhone } from "./Icons";
 
 export default function Equipo() {
     return (
-        <section id="equipo" className="reveal bg-[#355F96] relative overflow-hidden" style={{ minHeight: `500px` }}>
+        <section id="equipo" className="reveal bg-[#426DA3] relative overflow-hidden" style={{ minHeight: `500px` }}>
             <div aria-hidden="true" className="absolute inset-0 engineering-grid-light" />
             <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 py-24 lg:py-32">
                 <div className="max-w-2xl mx-auto text-center mb-14 lg:mb-16">

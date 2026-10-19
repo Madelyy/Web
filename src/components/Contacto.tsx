@@ -122,7 +122,7 @@ export default function Contacto() {
                         <ul className="space-y-3">
                             {empresaData.map((item) => (
                                 <li key={item.label} className="flex items-center gap-4 rounded-xl bg-white p-4" style={{ border: "1px solid #DDE8F5" }}>
-                                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#EBF0FA] text-[#4569B5]">{item.icon}</div>
+                                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#EBF0FA] text-[#426DA3]">{item.icon}</div>
                                     <div className="min-w-0">
                                         <div className="mb-0.5 text-xs font-medium text-[#6E85A0]">{item.label}</div>
                                         <div className="break-words text-sm text-[#1C2B3D]">{item.value}</div>

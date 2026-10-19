@@ -44,7 +44,7 @@ export default function Valores() {
                                 style={{ background: `linear-gradient(90deg, #4569B5, #5275BC)` }}
                             />
                             <div className="flex items-start justify-between mb-5">
-                                <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#EBF0FA] text-[#4569B5] transition-colors duration-200 group-hover:bg-[#4569B5] group-hover:text-white">
+                                <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#EBF0FA] text-[#4569B5] transition-colors duration-200 group-hover:bg-[#426DA3] group-hover:text-white">
                                     {v.icon}
                                 </span>
                                 <span

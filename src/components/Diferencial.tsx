@@ -3,10 +3,9 @@ import { blocksData } from "../data/blocksData";
 
 export default function Diferencial() {
     return (
-        <section className="reveal bg-[#355F96] relative py-24 lg:py-32 overflow-hidden">
+        <section className="reveal bg-[#426DA3] relative py-24 lg:py-32 overflow-hidden">
             <div aria-hidden="true" className="absolute inset-0 engineering-grid-light" />
             <SpiralLines />
-
             <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
                 <div className="mb-14 lg:mb-16 max-w-2xl">
                     <h2

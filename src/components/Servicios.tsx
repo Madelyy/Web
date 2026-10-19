@@ -18,7 +18,7 @@ export default function Servicios() {
     };
 
     return (
-        <section id="servicios" className="reveal bg-[#EEF3FA] py-24 lg:py-32 engineering-grid">
+        <section id="servicios" className="bg-[#EEF3FA] py-24 lg:py-32 engineering-grid">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
                 <div className="mb-14 lg:mb-16 flex gap-5">
                     <span

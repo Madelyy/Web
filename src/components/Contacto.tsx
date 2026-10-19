@@ -113,7 +113,7 @@ export default function Contacto() {
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
                 <div className="grid lg:grid-cols-5 gap-14 lg:gap-16 items-start">
                     <div className="lg:col-span-2 lg:sticky lg:top-28">
-                        <div className="mb-5 flex items-center gap-3 text-sm font-semibold text-[#2E52A8]">
+                        <div className="mb-5 flex items-center gap-3 text-sm font-semibold text-[#4569B5]">
                             <span aria-hidden="true" className="h-px w-8 bg-[#2E52A8]" />
                             Hablemos de tu proyecto
                         </div>
@@ -122,7 +122,7 @@ export default function Contacto() {
                         <ul className="space-y-3">
                             {empresaData.map((item) => (
                                 <li key={item.label} className="flex items-center gap-4 rounded-xl bg-white p-4" style={{ border: "1px solid #DDE8F5" }}>
-                                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#EBF0FA] text-[#2E52A8]">{item.icon}</div>
+                                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#EBF0FA] text-[#4569B5]">{item.icon}</div>
                                     <div className="min-w-0">
                                         <div className="mb-0.5 text-xs font-medium text-[#6E85A0]">{item.label}</div>
                                         <div className="break-words text-sm text-[#1C2B3D]">{item.value}</div>
@@ -167,7 +167,7 @@ export default function Contacto() {
                                 <input name="website" value={form.website} onChange={handleChange} tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 opacity-0" />
                                 <div className="mb-8 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
                                     <div>
-                                        <span className="text-sm font-semibold text-[#2E52A8]">Formulario de contacto</span>
+                                        <span className="text-sm font-semibold text-[#4569B5]">Formulario de contacto</span>
                                         <h3 className="text-2xl font-bold text-[#1C2B3D]" style={{ fontFamily: "var(--font-display)", letterSpacing: "-0.02em" }}>Solicita una evaluación</h3>
                                     </div>
                                     <p className="text-xs text-[#6E85A0]">Los campos sin la etiqueta «Opcional» son obligatorios.</p>
@@ -206,7 +206,7 @@ export default function Contacto() {
                                                 aria-checked={tieneEmbarcaciones}
                                                 aria-label="Mi consulta involucra embarcaciones pesqueras"
                                                 onClick={() => setTieneEmbarcaciones(!tieneEmbarcaciones)}
-                                                className={`relative h-6 w-11 shrink-0 cursor-pointer rounded-full transition-colors ${tieneEmbarcaciones ? "bg-[#2E52A8]" : "bg-[#CAD8EC]"}`}
+                                                className={`relative h-6 w-11 shrink-0 cursor-pointer rounded-full transition-colors ${tieneEmbarcaciones ? "bg-[#4569B5]" : "bg-[#CAD8EC]"}`}
                                             >
                                                 <span className={`absolute top-0.5 h-5 w-5 rounded-full bg-white shadow transition-all ${tieneEmbarcaciones ? "left-[22px]" : "left-0.5"}`} />
                                             </button>

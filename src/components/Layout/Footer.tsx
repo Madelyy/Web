@@ -21,14 +21,14 @@ function ColumnTitle({ children }: { children: React.ReactNode }) {
             >
                 {children}
             </div>
-            <div aria-hidden="true" className="mt-2 h-0.5 w-6 rounded-full bg-[#4A7AB5]" />
+            <div aria-hidden="true" className="mt-2 h-0.5 w-6 rounded-full bg-[#96BDD8]" />
         </div>
     );
 }
 
 export default function FooterSection() {
     return (
-        <footer className="relative text-white" style={{ background: `#172033` }}>
+        <footer className="relative text-white" style={{ background: `#243F73` }}>
             <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-16 pb-8">
                 <div className="grid sm:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-10 mb-14">
                     <div className="sm:col-span-2 lg:col-span-4">

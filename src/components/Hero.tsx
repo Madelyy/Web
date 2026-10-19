@@ -12,7 +12,7 @@ export default function Hero() {
             />
             <div
                 className="absolute inset-0"
-                style={{ backgroundImage: `linear-gradient(155deg, rgba(20,30,50,0.89) 0%, rgba(36,63,115,0.58) 50%, rgba(36,63,115,0.7) 100%)` }}
+                style={{ backgroundImage: `linear-gradient(155deg, rgba(24, 61, 134, 0.89) 0%, rgba(36,63,115,0.58) 50%, rgba(36,63,115,0.7) 100%)` }}
             />
             <div aria-hidden="true" className="absolute inset-0 engineering-grid-light" />
 
@@ -43,7 +43,6 @@ export default function Hero() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4">
-                        {/* Primario: blanco sobre azul, máximo contraste */}
                         <a
                             href="#servicios"
                             className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-sm bg-white text-[#243F73] transition-all duration-200 hover:bg-[#EEF3FA] hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
@@ -54,10 +53,9 @@ export default function Hero() {
                                 <IconChevronRight />
                             </span>
                         </a>
-                        {/* Secundario: contorno translúcido */}
                         <a
                             href="#contacto"
-                            className="inline-flex items-center justify-center px-7 py-3.5 rounded-lg font-semibold text-sm text-white backdrop-blur-sm transition-all duration-200 hover:bg-white/15 hover:border-white/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                            className="inline-flex items-center justify-center px-7 py-3.5 rounded-lg font-semibold text-sm text-white backdrop-blur-xs transition-all duration-200 hover:bg-white/15 hover:border-white/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                             style={{
                                 border: `1px solid rgba(255,255,255,0.4)`,
                                 background: `rgba(255,255,255,0.06)`,
@@ -69,7 +67,6 @@ export default function Hero() {
                     </div>
                 </div>
             </div>
-
             <div
                 aria-hidden="true"
                 className="absolute bottom-[-1px] left-0 right-0 h-24 pointer-events-none"

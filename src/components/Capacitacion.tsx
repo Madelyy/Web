@@ -12,7 +12,7 @@ export default function Capacitacion() {
                     backgroundPosition: `center`,
                 }}
             />
-            <div className="absolute inset-0" style={{ background: `rgba(36,63,115,0.9)` }} />
+            <div className="absolute inset-0" style={{ background: `#355F96` }} />
             <div aria-hidden="true" className="absolute inset-0 engineering-grid-light" />
 
             <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 py-24 lg:py-32">

@@ -27,7 +27,7 @@ export default function Nosotros() {
                                 <li key={s.num} className="flex gap-5 group">
                                     <div className="flex flex-col items-center">
                                         <div
-                                            className="w-9 h-9 shrink-0 rounded-full flex items-center justify-center text-xs font-bold bg-white text-[#2E52A8] transition-colors duration-200 group-hover:bg-[#2E52A8] group-hover:text-white"
+                                            className="w-9 h-9 shrink-0 rounded-full flex items-center justify-center text-xs font-bold bg-white text-[#4569B5] transition-colors duration-200 group-hover:bg-[#4569B5] group-hover:text-white"
                                             style={{ border: `1.5px solid #CAD8EC` }}
                                         >
                                             {s.num}
@@ -67,7 +67,7 @@ export default function Nosotros() {
                             />
                         </div>
                         <div
-                            className="rounded-xl p-5 max-w-[260px] bg-[#1D5093] text-white lg:absolute lg:-bottom-8 lg:-left-8 transition-transform duration-200 hover:-translate-y-1"
+                            className="rounded-xl p-5 max-w-[260px] bg-[#4569B5] text-white lg:absolute lg:-bottom-8 lg:-left-8 transition-transform duration-200 hover:-translate-y-1"
                             style={{
                                 border: `4px solid #fff`,
                                 boxShadow: `0 12px 32px rgba(28,43,61,0.22)`,

@@ -37,7 +37,7 @@ export default function Servicios() {
                     {serviciosData.map((s) => (
                         <article
                             key={s.num}
-                            className="group relative flex flex-col rounded-xl p-6 bg-white overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#B9CCE6] hover:shadow-lg"
+                            className="group relative flex flex-col rounded-xl p-6 bg-white overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#416B9F] hover:shadow-lg"
                             style={{
                                 border: `1px solid #DDE8F5`,
                                 boxShadow: `0 1px 2px rgba(28,43,61,0.04), 0 8px 24px -8px rgba(28,43,61,0.10)`,
@@ -46,10 +46,10 @@ export default function Servicios() {
                             <div
                                 aria-hidden="true"
                                 className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"
-                                style={{ background: `linear-gradient(90deg, #2E52A8, #4A7AB5)` }}
+                                style={{ background: `linear-gradient(90deg, #4569B5, #5275BC)` }}
                             />
                             <div className="flex items-start justify-between mb-5">
-                                <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#EBF0FA] text-[#2E52A8] transition-colors duration-200 group-hover:bg-[#2E52A8] group-hover:text-white">
+                                <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#EBF0FA] text-[#4569B5] transition-colors duration-200 group-hover:bg-[#4569B5] group-hover:text-white">
                                     {s.icon}
                                 </span>
                                 <span
@@ -69,7 +69,7 @@ export default function Servicios() {
                             <button
                                 type="button"
                                 onClick={() => setSelectedService(s)}
-                                className="mt-auto self-start flex items-center gap-2 text-sm font-semibold text-[#2E52A8] cursor-pointer after:absolute after:inset-0 after:content-[''] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#2E52A8] rounded"
+                                className="mt-auto self-start flex items-center gap-2 text-sm font-semibold text-[#4569B5] cursor-pointer after:absolute after:inset-0 after:content-[''] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#2E52A8] rounded"
                             >
                                 Conocer servicio
                                 <span className="transition-transform duration-200 group-hover:translate-x-1">

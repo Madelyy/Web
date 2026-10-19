@@ -4,7 +4,7 @@ export default function CTA() {
     return (
         <section className="reveal relative py-24 lg:py-32 overflow-hidden">
             <div className="absolute inset-0" style={{ backgroundImage: `url(/images/embarcacionMariangella.jpeg)`, backgroundSize: `cover`, backgroundPosition: `center` }} />
-            <div className="absolute inset-0" style={{ background: `rgba(36,63,115,0.9)` }} />
+            <div className="absolute inset-0" style={{ background: `rgba(53, 95, 150, 0.8)` }} />
             <div aria-hidden="true" className="absolute inset-0 engineering-grid-light" />
             <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
                 <div className="mx-auto max-w-4xl rounded-2xl px-6 py-14 lg:px-16 lg:py-16 text-center">
@@ -32,7 +32,7 @@ export default function CTA() {
                         </a>
                         <a
                             href="#servicios"
-                            className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-sm text-white transition-all duration-200 hover:bg-white/15 hover:border-white/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                            className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-sm text-white transition-all duration-200 backdrop-blur-xs hover:bg-white/15 hover:border-white/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                             style={{
                                 border: `1px solid rgba(255,255,255,0.4)`,
                                 fontFamily: `var(--font-display)`,

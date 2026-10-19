@@ -62,7 +62,7 @@ export default function HeaderSection() {
                 </div>
                 <button
                     type="button"
-                    className="lg:hidden flex h-11 w-11 items-center justify-center rounded-lg text-[#1C2B3D] transition-colors hover:bg-[#EEF3FA] cursor-pointer"
+                    className="lg:hidden flex h-11 w-11 items-center justify-center rounded-lg text-[#5275BC] transition-colors hover:bg-[#EEF3FA] cursor-pointer"
                     onClick={() => setOpen(!open)}
                     aria-expanded={open}
                     aria-controls="menu-movil"

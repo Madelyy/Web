@@ -5,7 +5,7 @@ export default function IconX() {
             height="24"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="#1D5093"
+            stroke="#4569B5"
             strokeWidth="1.5"
             strokeLinecap="round"
         >

@@ -1,86 +1,89 @@
-import Image from "next/image";
-import { etapasData } from "../data/etapasData";
+import Image from "next/image"
+import { cardsMVData } from "@/data/cardsMVData"
+import { valoresData } from "@/data/valoresData"
+import MarcoTecnico from "@/components/ui/MarcoTecnico"
+import Reveal from "@/components/ui/Reveal"
+import Titulo from "@/components/ui/Titulo"
 
+/**
+ * Fusiona lo que antes eran 3 secciones: Nosotros + MisionVision + Valores.
+ * (El proceso de 5 etapas ahora vive en <Ruta />.)
+ */
 export default function Nosotros() {
     return (
-        <section id="nosotros" className="reveal py-24 lg:py-32 bg-white">
-            <div className="max-w-7xl mx-auto px-6 lg:px-10">
-                <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-                    <div className="max-w-[520px]">
-                        <h2
-                            className="text-3xl lg:text-4xl font-bold mb-6 leading-tight"
-                            style={{
-                                fontFamily: `var(--font-display)`,
-                                color: `#1C2B3D`,
-                                letterSpacing: `-0.02em`,
-                            }}
-                        >
-                            Experiencia técnica orientada a resultados.
-                        </h2>
-                        <p className="text-[#51677A] text-base leading-relaxed mb-10">
-                            Somos una empresa peruana especializada en servicios de capacitación, consultoría y
-                            asesoramiento técnico para el sector pesquero y productivo, con experiencia en gestión,
-                            calidad, seguridad y mejora de procesos aplicados a embarcaciones y operaciones pesqueras.
+        <section id="nosotros" className="bg-white py-24 lg:py-32">
+            <div className="mx-auto max-w-7xl px-6 lg:px-10">
+                {/* ---- Quiénes somos ---- */}
+                <div className="grid items-center gap-16 lg:grid-cols-[1fr_.9fr] lg:gap-24">
+                    <Reveal>
+                        <Titulo titulo="Experiencia técnica orientada a resultados." />
+                        <p className="mt-8 max-w-[540px] text-base leading-relaxed text-[#51677A]">
+                            Somos una empresa peruana especializada en servicios de capacitación, consultoría y asesoramiento
+                            técnico para el sector pesquero y productivo, con experiencia en gestión, calidad, seguridad y mejora
+                            de procesos aplicados a embarcaciones y operaciones pesqueras.
                         </p>
-                        <ol className="rounded-xl bg-[#F5F8FC] p-6" style={{ border: `1px solid #E8EFF8` }}>
-                            {etapasData.map((s) => (
-                                <li key={s.num} className="flex gap-5 group">
-                                    <div className="flex flex-col items-center">
-                                        <div
-                                            className="w-9 h-9 shrink-0 rounded-full flex items-center justify-center text-xs font-bold bg-white text-[#4569B5] transition-colors duration-200 group-hover:bg-[#4569B5] group-hover:text-white"
-                                            style={{ border: `1.5px solid #CAD8EC` }}
-                                        >
-                                            {s.num}
-                                        </div>
-                                        {!s.isLast && <div className="bg-[#CAD8EC] min-h-6 w-px flex-1 my-1" />}
-                                    </div>
-                                    <div className={s.isLast ? "" : "pb-5"}>
-                                        <div
-                                            className="text-[#1C2B3D] font-semibold text-sm mb-0.5"
-                                            style={{ fontFamily: `var(--font-display)` }}
-                                        >
-                                            {s.title}
-                                        </div>
-                                        <div className="text-[#516A85] text-sm leading-relaxed">{s.desc}</div>
-                                    </div>
-                                </li>
-                            ))}
-                        </ol>
-                    </div>
-                    <div className="flex flex-col gap-5 lg:block lg:relative">
-                        <div
-                            aria-hidden="true"
-                            className="hidden lg:block absolute -top-4 -right-4 w-full h-full rounded-xl"
-                            style={{ background: `#EEF3FA`, border: `1px solid #DDE8F5` }}
-                        />
-                        <div
-                            className="relative rounded-xl overflow-hidden"
-                            style={{ boxShadow: `0 24px 64px rgba(28,43,61,0.14)` }}
+                        <p
+                            className="mt-8 max-w-[540px] border-l-2 border-boya pl-5 text-lg leading-snug font-semibold text-[#243F73]"
+                            style={{ fontFamily: "var(--font-display)" }}
                         >
-                            <Image
-                                src="/images/embValentina.jpeg"
-                                alt="Embarcación pesquera"
-                                width={480}
-                                height={480}
-                                className="w-full aspect-[4/3] lg:aspect-square object-cover"
-                                priority
-                            />
-                        </div>
-                        <div
-                            className="rounded-xl p-5 max-w-[260px] bg-[#4569B5] text-white lg:absolute lg:-bottom-8 lg:-left-8 transition-transform duration-200 hover:-translate-y-1"
-                            style={{
-                                border: `4px solid #fff`,
-                                boxShadow: `0 12px 32px rgba(28,43,61,0.22)`,
-                            }}
-                        >
-                            <div className="text-[#B7D2E6] text-xs font-semibold mb-1.5">Nuestro enfoque</div>
-                            <div className="font-semibold text-sm leading-snug">
-                                Soluciones técnicas para optimizar procesos y operaciones pesqueras.
+                            Soluciones técnicas para optimizar procesos y operaciones pesqueras.
+                        </p>
+                    </Reveal>
+
+                    <Reveal delay={150}>
+                        <MarcoTecnico className="mx-auto w-full max-w-lg lg:max-w-none">
+                            <div className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-[0_24px_64px_rgba(28,43,61,0.14)] lg:aspect-[4/5]">
+                                <Image
+                                    src="/images/embValentina.jpeg"
+                                    alt="Embarcación pesquera"
+                                    fill
+                                    priority
+                                    sizes="(min-width: 1024px) 45vw, 90vw"
+                                    className="object-cover"
+                                />
+                                <div aria-hidden="true" className="absolute inset-0 bg-[#4569B5]/15 mix-blend-multiply" />
                             </div>
-                        </div>
-                    </div>
+                        </MarcoTecnico>
+                    </Reveal>
+                </div>
+
+                {/* ---- Compromiso · Misión · Visión (sin tarjetas: texto sobre regla) ---- */}
+                <div className="mt-24 grid gap-12 border-t border-[#DDE8F5] pt-14 md:grid-cols-3 md:gap-10 lg:mt-32">
+                    {cardsMVData.map((card, i) => (
+                        <Reveal key={card.tag} delay={i * 120}>
+                            <div aria-hidden="true" className="regla-h mb-5 w-16 text-boya" />
+                            <h3 className="text-lg font-bold text-[#243F73]" style={{ fontFamily: "var(--font-display)" }}>
+                                {card.tag}
+                            </h3>
+                            <p className="mt-3 text-[15px] leading-relaxed text-[#445569]">{card.text}</p>
+                        </Reveal>
+                    ))}
+                </div>
+
+                {/* ---- Valores ---- */}
+                <div className="mt-24 lg:mt-32">
+                    <h3
+                        className="max-w-md text-2xl font-bold text-[#1C2B3D] lg:text-3xl"
+                        style={{ fontFamily: "var(--font-display)", letterSpacing: "-0.02em" }}
+                    >
+                        Los principios que guían nuestro trabajo.
+                    </h3>
+                    <div aria-hidden="true" className="regla-h mt-8 mb-8 w-full text-[#B9CCE6]" />
+                    <ul className="grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-5">
+                        {valoresData.map((v) => (
+                            <li key={v.label} className="group">
+                                <h4
+                                    className="text-base font-bold text-[#243F73] transition-colors duration-200 group-hover:text-boya-ink"
+                                    style={{ fontFamily: "var(--font-display)" }}
+                                >
+                                    {v.label}
+                                </h4>
+                                <p className="mt-2 text-sm leading-relaxed text-[#516A85]">{v.desc}</p>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             </div>
         </section>
-    );
+    )
 }

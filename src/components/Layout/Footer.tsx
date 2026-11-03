@@ -39,9 +39,9 @@ export default function FooterSection() {
     return (
         <footer className="relative overflow-hidden bg-[#2C4B85] text-white">
             {/* Ola: toma el color de la sección anterior (Contacto, #EEF3FA) */}
-            <Olas color="text-[#EEF3FA]" className="top-0 rotate-180" />
-
+            {/* <Olas color="text-[#EEF3FA]" className="top-0 absolute" /> */}
             <div aria-hidden="true" className="absolute inset-0 engineering-grid-light" />
+
 
             {/* Rosa de los vientos: decoración muy tenue */}
             <svg

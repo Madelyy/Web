@@ -12,6 +12,7 @@ import Contador from "./Contador"
 import Titulo from "@/components/ui/Titulo"
 import { formularioInicial } from "@/data/formularioInicial"
 import { PLAZOS } from "@/data/plazos"
+import Olas from "./ui/Olas"
 
 const Opcional = () => (
     <span className="rounded-full bg-[#EBF0FA] px-2 py-0.5 text-[11px] font-medium text-[#6E85A0]">Opcional</span>
@@ -169,7 +170,7 @@ export default function Contacto() {
     }
 
     return (
-        <section id="contacto" className="bg-[#EEF3FA] py-24 lg:py-32">
+        <section id="contacto" className="relative bg-[#EEF3FA] py-24 lg:pt-32 lg:pb-40">
             <div className="mx-auto max-w-7xl px-6 lg:px-10">
                 <div className="grid items-start gap-14 lg:grid-cols-5 lg:gap-16">
                     {/* ---------- Columna izquierda ---------- */}
@@ -473,6 +474,7 @@ export default function Contacto() {
                     </div>
                 </div>
             </div>
+            <Olas color="text-[#2C4B85]" cuadricula className="-bottom-px" />
         </section>
     )
 }

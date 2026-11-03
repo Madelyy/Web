@@ -8,7 +8,7 @@
 const ONDA = "c90-30 270-30 360 0s270 30 360 0"
 const RUTA = `M0 40${ONDA.repeat(4)}V80H0z`
 
-export default function Olas({ className = "", color = "text-white" }: { className?: string; color?: string }) {
+export default function Olas({ className = "", color = "text-white", cuadricula }: { className?: string; color?: string; cuadricula?: boolean }) {
     return (
         <div aria-hidden="true" className={`pointer-events-none absolute inset-x-0 overflow-hidden leading-[0] ${className}`}>
             <svg
@@ -25,6 +25,12 @@ export default function Olas({ className = "", color = "text-white" }: { classNa
             >
                 <path fill="currentColor" d={RUTA} />
             </svg>
+            {cuadricula && (
+                <div
+                    className="absolute inset-0 engineering-grid-light"
+                    style={{ backgroundPosition: "0 100%" }}
+                />
+            )}
         </div>
     )
 }
